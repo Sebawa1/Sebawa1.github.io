@@ -1,0 +1,15 @@
+/* public/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #004aad;
+    color: white;
+    padding: 10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
