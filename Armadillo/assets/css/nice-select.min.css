@@ -1,8 +1,8 @@
 /* Base styles for the nice-select component */
 .nice-select {
     -webkit-tap-highlight-color: transparent;
-    background-color: #fff;
-    border: 1px solid #e8e8e8;
+    background-color: #4494ff;
+    border: 1px solid #4494ff;
     border-radius: 5px;
     box-sizing: border-box;
     clear: both;
@@ -70,7 +70,7 @@
 
 /* List styling */
 .nice-select .list {
-    background-color: #fff;
+    background-color: #4494ff;
     border-radius: 5px;
     box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
     box-sizing: border-box;

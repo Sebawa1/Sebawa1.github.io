@@ -44,7 +44,7 @@
     line-height:1.5;
     color:#212529;
     text-align:left;
-    background-color:#fff}
+    background-color:#4494ff;}
     [tabindex="-1"]:focus:not(:focus-visible){outline:0!important}
     hr{box-sizing:content-box;
     height:0;
@@ -508,9 +508,12 @@
     .col-md-5{-ms-flex:0 0 41.666667%;
     flex:0 0 41.666667%;
     max-width:41.666667%}
-    .col-md-6{-ms-flex:0 0 50%;
+    .col-md-6{
+      -ms-flex:0 0 50%;
     flex:0 0 50%;
-    max-width:50%}
+    max-width:50%;
+    overflow: hidden;
+   }
     .col-md-7{-ms-flex:0 0 58.333333%;
     flex:0 0 58.333333%;
     max-width:58.333333%}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-primary: #4494ff;
+            --color-primary-2: #e0d110;
+            --color-primary-3: #1c4789;
+            --color-primary-4: #fffde1;
+            --color-primary-5: #94481c;
+        }
+
+        body {
+            background-color: var(--color-primary-4);
+            font-family: Arial, sans-serif;
+            color: var(--color-primary-3);
+        }
+
+        header {
+            background: var(--color-primary-2);
+            padding: 20px 0;
+        }
+
+        header .navbar {
+            justify-content: center;
+        }
+
+        header .navbar-brand img {
+            max-height: 60px;
+        }
+
+        header .navbar-nav .nav-link {
+            color: var(--color-primary-3) !important;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .main-content img {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member h3 {
+            color: var(--color-primary-5);
+        }
+
+        footer {
+            background: var(--color-primary-3);
+            color: var(--color-primary-4);
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container d-flex justify-content-center">
+                <a class="navbar-brand" href="/Armadillo/about.html">
+                    <img src="/assets/images/logo.png" alt="Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about.html">Acerca de</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container my-5">
+        <section class="row">
+            <div class="col-md-6">
+                <h2>Nuestra Historia</h2>
+                <p>Vender</p>
+                <p>Pomada</p>
+                <p>Aqui</p>
+            </div>
+            <div class="col-md-6">
+                <img src="img.jpg" alt="Sobre Nosotros" class="img-fluid">
+            </div>
+        </section>
+
+        <section class="my-5">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <div class="row">
+                <div class="col-sm-4 col-md-3 text-center mb-4">
+                    <div class="team-member">
+                        <img src="/assets/images/a.png" alt="Miembro del equipo 1">
+                        <h3>Bandas</h3>
+                        <p>Rol/Breve descripción</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center mb-4">
+                    <div class="team-member">
+                        <img src="/assets/images/aktshuallyy.png" alt="Miembro del equipo 2">
+                        <h3>Jotam</h3>
+                        <p>Rol/Breve descripción</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center mb-4">
+                    <div class="team-member">
+                        <img src="img.jpg" alt="Miembro del equipo 3">
+                        <h3>Pedro Orellana</h3>
+                        <p>Rol/Breve descripción</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center mb-4">
+                    <div class="team-member">
+                        <img src="/assets/images/sailorarmadillo.png" alt="Miembro del equipo 4">
+                        <h3>Barbara Riveros</h3>
+                        <p>Rol/Breve descripción</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center mb-4">
+                    <div class="team-member">
+                        <img src="img.jpg" alt="Miembro del equipo 5">
+                        <h3>denyss</h3>
+                        <p>Rol/Breve descripción</p>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center mb-4">
+                    <div class="team-member">
+                        <img src="img.jpg" alt="Miembro del equipo 6">
+                        <h3>yo</h3>
+                        <p>Rol/Breve descripción</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ARmadillo. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

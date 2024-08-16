@@ -6,7 +6,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'Armadillo')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Armadillo', 'index.html'));
+  res.sendFile(path.join(__dirname, 'Armadillo', 'modified_index.html'));
 });
 
 app.listen(port, () => {
