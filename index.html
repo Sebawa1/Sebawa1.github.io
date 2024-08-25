@@ -92,7 +92,17 @@
     </div>
 </section>
 
+<button id="load-css">Cargar Estilos</button>
 
+    <!-- JavaScript para cargar CSS dinámicamente al hacer clic -->
+    <script>
+        document.getElementById('load-css').addEventListener('click', () => {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'Armadillo/assets/css/style.css';
+            document.head.appendChild(link);
+        });
+    </script>
 
 <section class="service-section p-t-80 p-b-80">
     <div class="container text-center"> <!-- Centra el contenido -->
