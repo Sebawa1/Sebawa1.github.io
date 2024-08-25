@@ -4,10 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
+
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/PFP.png"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/PFP.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/PFP.png"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <link rel="stylesheet" href="assets/css/nice-select.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css" />
+    <link rel="stylesheet" href="assets/css/spacing.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <meta name="author" content="ARmadillo"> 
     
+    <title>ARmadillo - Aprender es más sencillo</title> <!-- Cambiar por el nombre de la pestaña -->
+    <script src="/assets/js/main.js" defer></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -27,11 +49,15 @@
                             <a class="nav-link" href="/index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about.html">Acerca de</a>
+                            <a class="nav-link" href="/about.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact.html">Sobre ARmadillo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/contact.html">Contacto</a>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -48,61 +74,250 @@
                 <p>Aqui</p>
             </div>
             <div class="col-md-6">
-                <img src="img.jpg" alt="Sobre Nosotros" class="img-fluid">
+                <img src="/assets/images/SailingLetras.png" alt="Sobre Nosotros" class="img-fluid">
             </div>
         </section>
 
         <section class="my-5">
             <h2>Conoce a Nuestro Equipo</h2>
-            <div class="row">
-                <div class="col-sm-4 col-md-3 text-center mb-4">
+            <div class="row ">
+                <!-- Miembro 1 -->
+                <div class="col-sm-4 text-center mb-4">
                     <div class="team-member">
-                        <img src="/assets/images/a.png" alt="Miembro del equipo 1">
-                        <h3>Bandas</h3>
-                        <p>Rol/Breve descripción</p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="/assets/images/banditkedin.jfif" alt="Miembro del equipo 1">
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="flip-card-back-content">
+                                        <img src="/assets/images/a.png" alt="Imagen trasera">
+                                        <div class="info">
+                                            <h3 class="team-name">Joaquín Pabst</h3>
+                                            <p>Scrum Master</p>
+                                            <a href="https://www.linkedin.com/in/j-pabst-olmedo/" class="linkedin-icon" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center mb-4">
+        
+                <!-- Miembro 4 -->
+                <div class="col-sm-4 text-center mb-4">
                     <div class="team-member">
-                        <img src="/assets/images/aktshuallyy.png" alt="Miembro del equipo 2">
-                        <h3>Jotam</h3>
-                        <p>Rol/Breve descripción</p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="/assets/images/barbkedin.jfif" alt="Miembro del equipo 4">
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="flip-card-back-content">
+                                        <img src="/assets/images/sailorarmadillo.png" alt="Imagen trasera">
+                                        <div class="info">
+                                            <h3 class="team-name">Bárbara Riveros</h3>
+                                            <p>UI & UX Design</p>
+                                            <a href="https://www.linkedin.com/in/b-riverosd" class="linkedin-icon" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center mb-4">
+        
+                <!-- Miembro 2 -->
+                <div class="col-sm-4 text-center mb-4">
                     <div class="team-member">
-                        <img src="img.jpg" alt="Miembro del equipo 3">
-                        <h3>Pedro Orellana</h3>
-                        <p>Rol/Breve descripción</p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="/assets/images/motajkedin.jfif" alt="Miembro del equipo 2">
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="flip-card-back-content">
+                                        <img src="/assets/images/aktshuallyy.png" alt="Imagen trasera">
+                                        <div class="info">
+                                            <h3 class="team-name">José Martín Cancino</h3>
+                                            <p>Testing</p>
+                                            <a href="https://www.linkedin.com/in/jose-martin-cz/" class="linkedin-icon" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center mb-4">
+
+
+                <!-- Miembro 3 -->
+                <div class="col-sm-4 text-center mb-4">
                     <div class="team-member">
-                        <img src="/assets/images/sailorarmadillo.png" alt="Miembro del equipo 4">
-                        <h3>Barbara Riveros</h3>
-                        <p>Rol/Breve descripción</p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="/assets/images/pedrokedin.jfif" alt="Miembro del equipo 3">
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="flip-card-back-content">
+                                        <img src="/assets/images/pedrus.png" alt="Imagen trasera">
+                                        <div class="info">
+                                            <h3 class="team-name">Pedro Orellana</h3>
+                                            <p>Product Owner & Blender</p>
+                                            <a href="https://www.linkedin.com/in/p-orellana-collins/" class="linkedin-icon" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center mb-4">
+       
+
+                <!-- Miembro 5 -->
+                <div class="col-sm-4 text-center mb-4">
                     <div class="team-member">
-                        <img src="img.jpg" alt="Miembro del equipo 5">
-                        <h3>denyss</h3>
-                        <p>Rol/Breve descripción</p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="/assets/images/denysslink.jfif" alt="Miembro del equipo 5">
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="flip-card-back-content">
+                                        <img src="/assets/images/skibidi.png" alt="Imagen trasera">
+                                        <div class="info">
+                                            <h3 class="team-name">Denyss Cárcamo</h3>
+                                            <p>Tech & Unity</p>
+                                            <a href="https://www.linkedin.com/in/denyss-cárcamo/" class="linkedin-icon" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-3 text-center mb-4">
+        
+                <!-- Miembro 6 -->
+                <div class="col-sm-4 text-center mb-4">
                     <div class="team-member">
-                        <img src="img.jpg" alt="Miembro del equipo 6">
-                        <h3>yo</h3>
-                        <p>Rol/Breve descripción</p>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="/assets/images/sebalink.jfif" alt="Miembro del equipo 6">
+                                </div>
+                                <div class="flip-card-back">
+                                    <div class="flip-card-back-content">
+                                        <img src="/assets/images/letrero.png" alt="Imagen trasera">
+                                        <div class="info">
+                                            <h3 class="team-name">Sebastián Garay</h3>
+                                            <p>Marketing & Comms</p>
+                                            <a href="https://www.linkedin.com/in/sgarayb/" class="linkedin-icon" target="_blank">
+                                                <i class="fab fa-linkedin"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+                
+        
+        
+
+
     </div>
 
-    <footer>
-        <p>&copy; 2024 ARmadillo. Todos los derechos reservados.</p>
+    <footer class="template-footer bg-blue footer-white-color">
+        <style>
+            .bg-blue {
+    background-color: #4494ff;
+    padding: 2rem; /* Ajusta usando rem */
+
+}
+.social-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+        </style>
+        <div class="container">
+            <div class="footer-widgets p-t-80 p-b-30">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="d-lg-flex justify-content-center">
+                            <div class="widget nav-widget">
+                                <h5 class="widget-title">a</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="widget contact-widget pl-xl-5">
+                            <h5 class="widget-title">Contáctanos</h5>
+<ul>
+    <li>
+        <a href="https://www.facebook.com/" rel="noopener noreferrer nofollow" target="_blank">
+            <img src="/assets/images/instagram.png" alt="Facebook" class="social-logo">
+            Armadillo App
+        </a>
+    </li>
+    <li>
+        <a href="https://www.instagram.com/armadillo.cl" rel="noopener noreferrer nofollow" target="_blank">
+            <img src="/assets/images/instagram.png" alt="Instagram" class="social-logo">
+            armadillo.cl
+        </a>
+    </li>
+    <li>
+        <a href="https://api.whatsapp.com/send/?phone=56964959449&text=Hola%2C+%C2%BFqu%C3%A9+tal%3F+%F0%9F%98%81" rel="noopener noreferrer nofollow" target="_blank">
+            <img src="/assets/images/instagram.png" alt="WhatsApp" class="social-logo">
+            +56 9 jotam 5555
+        </a>
+    </li>
+    <li>
+        <a href="mailto:armadilloapp.cl@gmail.com" rel="noopener noreferrer nofollow" target="_blank">
+            <img src="/assets/images/instagram.png" alt="Email" class="social-logo">
+            armadilloapp.cl@gmail.com
+        </a>
+    </li>
+</ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright border-top-off-white">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-sm-auto col-12">
+                        <div class="copyright-logo text-center text-sm-left">
+                            <img src="/assets/images/logo.png" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="col-sm-auto col-12">
+                        <p class="copyright-text text-center text-sm-right pt-4 pt-sm-0">
+                            <script>document.write(new Date().getFullYear())</script>
+                            &copy; <a href="#">ARmadillo</a>. Reservados todos los derechos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
