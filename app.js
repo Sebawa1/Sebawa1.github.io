@@ -6,7 +6,6 @@ const port = 3000;
 // Servir archivos estáticos desde el directorio 'assets'
 app.use(express.static(path.join(__dirname, 'Armadillo')));
 
-// Ruta principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
