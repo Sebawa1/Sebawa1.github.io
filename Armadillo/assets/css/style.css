@@ -153,7 +153,7 @@ header .navbar-nav .nav-link {
 }
 
 .info {
-    background-color: var(--color-primary-2);
+    background-color: var(--color-primary-4);
     padding: 10px;
     border-radius: 30px;
     width: 90%; /* Ajuste del ancho del contenido */
@@ -165,6 +165,36 @@ header .navbar-nav .nav-link {
     text-decoration: none;
     margin-top: 10px;
 }
+
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo de la barra de navegación */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
+}
+
+.nav-link {
+    color: #343a40;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-2); /* Color al pasar el cursor */
+    transform: translateY(-5px); /* Movimiento hacia arriba al hacer hover */
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotación del ícono de menú al pasar el cursor */
+}
+
+
+
 
 /* Ajustar el espaciado entre tarjetas */
 @media (min-width: 768px) {
@@ -1415,11 +1445,11 @@ textarea {
 }
 
 .template-header.nav-primary-5 .nav-menu > ul > li > a::before {
-    background-color: var(--color-primary-5);
+    background-color: var(--color-primary-4);
 }
 
 .template-header.nav-primary-5 .nav-menu > ul > li.active > a {
-    color: var(--color-primary-5);
+    color: var(--color-primary-4);
 }
 
 .template-header.nav-primary-5 .language-selection .nice-select {
@@ -1427,7 +1457,7 @@ textarea {
 }
 
 .template-header.nav-primary-5 .language-selection .nice-select::before {
-    color: var(--color-primary-5);
+    color: var(--color-primary-4);
 }
 
 
@@ -1471,7 +1501,7 @@ textarea {
 }
 
 .template-header.submenu-primary-5 .nav-menu li .sub-menu a:hover {
-    background-color: var(--color-primary-5);
+    background-color: var(--color-primary-4);
 }
 
 /* Nav Primary 7 Styles */
@@ -2053,8 +2083,8 @@ textarea {
 }
 
 .template-btn.primary-bg-5:not(:hover) {
-    background-color: var(--color-primary-5);
-    border-color: var(--color-primary-5);
+    background-color: var(--color-primary-4);
+    border-color: var(--color-primary-2);
     box-shadow: 0 10px 30px 0 rgba(85,128,255,.36);
 }
 
@@ -7664,11 +7694,7 @@ textarea {
 .contact-form-v2 .form-group textarea {
     height: 160px;
 }
-.nav-link:hover {
-    color: var(--color-white);
-    background-color: var(--color-primary-5);
-    box-shadow: 0 10px 30px 0 rgba(85, 128, 255, .75);
-}
+
 
 .service-tab-section {
     position: relative;
