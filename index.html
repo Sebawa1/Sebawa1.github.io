@@ -71,26 +71,49 @@
                     </div>
                 </nav>
             </header>
-
+            
 <!-- Hero Section -->
-<section class="hero-area-v2" style="padding-left: 100px; padding-right: 100px; height: auto;">
+<section class="hero-area-v2" style="padding: 20px; height: auto;">
 
     <div class="container">
         <div class="row d-flex align-items-center">
-            <div class="col-md-6 animate__animated animate__fadeInLeft">
-                <div class="hero-content">
+            <div class="col-md-6 col-12 animate__animated animate__fadeInLeft">
+                <div class="hero-content text-center text-md-left">
                     <h1 class="hero-title">Bienvenido a ARmadillo</h1>
                     <p class="hero-subtitle">Con ARmadillo aprender es sencillo</p>
                 </div>
             </div>
-            <div class="col-md-6 animate__animated animate__fadeInRight">
-                <div class="video-responsive-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PZl8BaVnsSI" title="ARmadillo Video Pitch (WIP Comercial)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border: 0; max-width: 100%; max-height: 100%;"></iframe>
+            <div class="col-md-6 col-12 animate__animated animate__fadeInRight">
+                <div class="video-responsive-container text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PZl8BaVnsSI" title="ARmadillo Video Pitch (WIP Comercial)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border: 0; max-width: 100%;"></iframe>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<style>
+    @media (max-width: 768px) {
+        .hero-area-v2 {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .video-responsive-container {
+            margin-top: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+    }
+</style>
+
 
 
 <section class="service-section p-t-80 p-b-80">
