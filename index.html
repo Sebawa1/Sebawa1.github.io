@@ -73,86 +73,86 @@
                 </nav>
             </header>
             
-<!-- Hero Section -->
-<section class="hero-area-v2" style="padding: 20px; height: auto;">
+            <!-- Hero Section -->
+            <section class="hero-area-v2" style="padding: 20px; height: auto;">
 
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6 col-12 animate__animated animate__fadeInLeft">
-                <div class="hero-content text-center text-md-left">
-                    <h1 class="hero-title">Bienvenido a ARmadillo</h1>
-                    <p class="hero-subtitle">Con ARmadillo aprender es sencillo</p>
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-md-6 col-12 animate__animated animate__fadeInLeft">
+                            <div class="hero-content text-center text-md-left">
+                                <h1 class="hero-title">Bienvenido a ARmadillo</h1>
+                                <p class="hero-subtitle">Con ARmadillo aprender es sencillo</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12 animate__animated animate__fadeInRight">
+                            <div class="video-responsive-container text-center">
+                                <iframe src="https://www.youtube.com/embed/PZl8BaVnsSI" title="ARmadillo Video Pitch (WIP Comercial)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6 col-12 animate__animated animate__fadeInRight">
-                <div class="video-responsive-container text-center">
-                    <iframe src="https://www.youtube.com/embed/PZl8BaVnsSI" title="ARmadillo Video Pitch (WIP Comercial)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
+            </section>
+
+            <style>
+                /* Responsive adjustments */
+                .hero-area-v2 {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    background-color: #e0d110;
+                }
+
+                /* Ensure text wraps properly */
+                .hero-title {
+                    font-size: 3vw; /* Dynamic font size */
+                }
+
+                .hero-subtitle {
+                    font-size: 1.5vw;
+                }
+
+                .video-responsive-container {
+                    position: relative;
+                    padding-bottom: 56.25%; /* 16:9 ratio */
+                    height: 0;
+                    overflow: hidden;
+                    max-width: 100%;
+                }
+
+                .video-responsive-container iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                /* Mobile specific styles */
+                @media (max-width: 768px) {
+                    .hero-title {
+                        font-size: 6vw;
+                    }
+
+                    .hero-subtitle {
+                        font-size: 4vw;
+                    }
+
+                    .video-responsive-container {
+                        margin-top: 20px;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .hero-title {
+                        font-size: 8vw;
+                    }
+
+                    .hero-subtitle {
+                        font-size: 5vw;
+                    }
+                }
+            </style>
         </div>
     </div>
-</section>
-
-<style>
-    /* Responsive adjustments */
-    .hero-area-v2 {
-        padding-left: 20px;
-        padding-right: 20px;
-        background-color: #e0d110;
-    }
-
-    /* Ensure text wraps properly */
-    .hero-title {
-        font-size: 3vw; /* Dynamic font size */
-    }
-
-    .hero-subtitle {
-        font-size: 1.5vw;
-    }
-
-    .video-responsive-container {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 ratio */
-        height: 0;
-        overflow: hidden;
-        max-width: 100%;
-    }
-
-    .video-responsive-container iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    /* Mobile specific styles */
-    @media (max-width: 768px) {
-        .hero-title {
-            font-size: 6vw;
-        }
-
-        .hero-subtitle {
-            font-size: 4vw;
-        }
-
-        .video-responsive-container {
-            margin-top: 20px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .hero-title {
-            font-size: 8vw;
-        }
-
-        .hero-subtitle {
-            font-size: 5vw;
-        }
-    }
-</style>
-
-
 
 <section class="service-section p-t-80 p-b-80">
     <div class="container text-center"> <!-- Centra el contenido -->
