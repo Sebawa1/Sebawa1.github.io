@@ -92,83 +92,6 @@
                     </div>
                 </div>
             </section>
-
-            <style>
-                /* Responsive adjustments */
-                .hero-area-v2 {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                    background-color: #fcd34d;
-                }
-
-                /* Ensure text wraps properly */
-                .hero-title {
-                    font-size: 3vw; /* Dynamic font size */
-                    margin: 0 auto;
-                }
-
-                .hero-subtitle {
-                    font-size: 1.5vw;
-                    margin: 0 auto;
-                }
-
-                .video-responsive-container {
-                    position: relative;
-                    padding-bottom: 56.25%; /* 16:9 ratio */
-                    height: 0;
-                    overflow: hidden;
-                    max-width: 100%;
-                }
-
-                .video-responsive-container iframe {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                }
-
-                /* Mobile specific styles */
-                @media (max-width: 768px) {
-                    .hero-title {
-                        font-size: 6vw;
-                    }
-
-                    .hero-subtitle {
-                        font-size: 4vw;
-                    }
-                    .hero-content {
-                    text-align: center; /* Center the text on mobile */
-                    }
-
-                    .video-responsive-container {
-                        margin-top: 10px;
-                    }
-                    .container {
-                        padding-left: 0; /* Remove padding for better centering */
-                        padding-right: 0;
-                    }
-                }
-    
-
-                @media (max-width: 576px) {
-                    .hero-title {
-                        font-size: 7vw;
-                    }
-
-                    .hero-subtitle {
-                        font-size: 2vw;
-                    }
-                    .hero-content {
-                        text-align: center;
-                    }
-
-                    .container {
-                        padding-left: 0;
-                        padding-right: 0;
-                    }
-                }
-            </style>
         </div>
     </div>
 
@@ -318,84 +241,162 @@
   </section>
 
 
-<footer class="template-footer bg-blue footer-white-color">
+  <footer class="template-footer bg-blue footer-white-color">
     <style>
         .bg-blue {
-background-color: #4494ff;
-padding: 2rem; /* Ajusta usando rem */
-
-}
-.social-logo {
-width: 24px;
-height: 24px;
-margin-right: 8px;
-vertical-align: middle;
-}
-
+            background-color: #4494ff;
+            padding: 2rem; /* Ajusta usando rem */
+        }
+        .footer-white-color {
+            color: #fff;
+        }
+        .social-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        .link-underline {
+            text-decoration: underline;
+            color: #fff;
+        }
+        .link-underline:hover {
+            color: #e0d110; /* Color primario-2 */
+        }
+        .footer-wrapper {
+            padding: 1rem 0;
+        }
+        .footer h6 {
+            color: #fff;
+        }
+        .c-grey-1 {
+            color: #fff;
+        }
+        .footer-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-list li {
+            margin-bottom: 0.5rem;
+        }
+        .footer-list a {
+            color: #fff;
+        }
+        .footer-list a:hover {
+            color: #e0d110;
+        }
+        .footer-copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+            color: #fff;
+        }
+        .footer-social i {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+        .footer-social a:hover i {
+            color: #e0d110;
+        }
+        .footer-pattern {
+            background-size: cover;
+            height: 100px;
+            background-position: center;
+            margin-top: 1rem;
+        }
     </style>
+
+    <div class="footer-wrapper">
     <div class="container">
-        <div class="footer-widgets p-t-80 p-b-30">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="d-lg-flex justify-content-center">
-                        <div class="widget nav-widget">
-                            <h5 class="widget-title">a</h5>
+        <div class="row">
+            <div class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
+                <div class="footer-row">
+
+                    
+                    <div class="footer-detail">
+                        <a href="/">
+                            <img src="./assets/images/logo.png" alt="footer-logo">
+                        </a>
+                        <p class="c-grey-1">ARmadillo es una aplicación móvil diseñada para mejorar la comprensión lectora de niños de primero y segundo básico mediante el uso de Realidad Aumentada.</p>
+                        <div class="links">
+                            <a class="link-underline" href="mailto:armadilloapp.cl@gmail.com">
+                                <span>armadilloapp.cl@gmail.com</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="footer-list footer-social">
+                        <h6>Síguenos</h6>
+                        <ul>
+                            <table>
+                                <thead>
+                                    
+                                </thead><tbody><tr><td>
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" class="link-underline" target="_blank" rel="noreferrer">
+                                            <i class="fab fa-facebook"></i></a></li></td><td><li class="facebook">
+                                                <a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" class="link-underline" target="_blank" rel="noreferrer">
+                                                    <span>Facebook</span></a></li></td></tr><tr><td>
+                                    <li class="linkedin">
+                                        <a href="https://www.linkedin.com/company/armadilloapp" class="link-underline" target="_blank" rel="noreferrer">
+                                            <i class="fab fa-instagram"></i></a></li></td><td><li class="instagram">
+                                                <a href="https://www.linkedin.com/company/armadilloapp" class="link-underline" target="_blank" rel="noreferrer">
+                                                    <span>Instagram</span></a></li></td></tr><tr><td>
+                                    <li class="youtube">
+                                        <a href="https://www.youtube.com/@ARmadilloApp" class="link-underline" target="_blank" rel="noreferrer">
+                                            <i class="fab fa-youtube"></i></a></li></td><td><li class="youtube">
+                                                <a href="https://www.youtube.com/@ARmadilloApp" class="link-underline" target="_blank" rel="noreferrer">
+                                                    <span>Youtube</span></a></li></td></tr></tbody></table></ul>
+                    </div>
+
+
+                    <div class="footer-list">
+                        <h6>Navegación</h6><ul>
+                            <li><a class="link-underline" href="/about"><span>Sobre Nosotros</span></a></li>
+                            <li><a class="link-underline" href="/about2"><span>Sobre Armadillo</span></a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-list">
+                        <h6>Descubre Más</h6>
+                        <ul>
+                            <li><a class="link-underline" href="/planes"><span>Planes</span></a></li>
+                            <li><a class="link-underline" href="/contact"><span>Contacto</span></a></li>
+                            <li class="youtube"><a href="https://maps.app.goo.gl/jjXZ6oDQLfY6t87r5" class="link-underline" target="_blank" rel="noreferrer"><span>Como llegar</span></a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="footer-list">
+                        <h6>Somos parte de</h6><ul><li><a href="https://www.feriadesoftware.cl/" class="link-underline" target="_blank" rel="noreferrer">
+                            <img src="./assets/images/fesw.png" alt="footer-logo" width="200"></a></li></ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="widget contact-widget pl-xl-5">
-                        <h5 class="widget-title">Contáctanos</h5>
-<ul>
-<li>
-    <a href="https://www.facebook.com/" rel="noopener noreferrer nofollow" target="_blank">
-        <img src="/assets/images/instagram.png" alt="Facebook" class="social-logo">
-        Armadillo App
-    </a>
-</li>
-<li>
-    <a href="https://www.instagram.com/armadillo.cl" rel="noopener noreferrer nofollow" target="_blank">
-        <img src="/assets/images/instagram.png" alt="Instagram" class="social-logo">
-        armadillo.cl
-    </a>
-</li>
-<li>
-    <a href="https://api.whatsapp.com/send/?phone=56964959449&text=Hola%2C+%C2%BFqu%C3%A9+tal%3F+%F0%9F%98%81" rel="noopener noreferrer nofollow" target="_blank">
-        <img src="/assets/images/instagram.png" alt="WhatsApp" class="social-logo">
-        +56 9 jotam 5555
-    </a>
-</li>
-<li>
-    <a href="mailto:armadilloapp.cl@gmail.com" rel="noopener noreferrer nofollow" target="_blank">
-        <img src="/assets/images/instagram.png" alt="Email" class="social-logo">
-        armadilloapp.cl@gmail.com
-    </a>
-</li>
-</ul>
-
-                    </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
+                <div class="footer-copyright c-grey-1"><h6>© ARmadillo</h6></div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="footer-copyright border-top-off-white">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-sm-auto col-12">
-                    <div class="copyright-logo text-center text-sm-left">
-                        <img src="./assets/images/logo.png" alt="Logo">
-                    </div>
-                </div>
-                <div class="col-sm-auto col-12">
-                    <p class="copyright-text text-center text-sm-right pt-4 pt-sm-0">
-                        <script>document.write(new Date().getFullYear())</script>
-                        &copy; <a href="#">ARmadillo</a>. Reservados todos los derechos.
-                    </p>
-                </div>
-            </div>
+        <div class="footer-pattern" style="background-image: url(&quot;/static/media/pattern-1.bf447cceb70178061f43.jpg&quot;);">
+
         </div>
     </div>
 </footer>
+
+
+
+
+
+
+
 
 
     

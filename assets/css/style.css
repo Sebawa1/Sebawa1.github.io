@@ -84,6 +84,84 @@ header .navbar-nav .nav-link {
 }
 
 
+/* Responsive adjustments */
+.hero-area-v2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fcd34d;
+}
+
+/* Ensure text wraps properly */
+.hero-title {
+    font-size: 3vw; /* Dynamic font size */
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    font-size: 1.5vw;
+    margin: 0 auto;
+}
+
+.video-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 6vw;
+    }
+
+    .hero-subtitle {
+        font-size: 4vw;
+    }
+    .hero-content {
+    text-align: center; /* Center the text on mobile */
+    }
+
+    .video-responsive-container {
+        margin-top: 10px;
+    }
+    .container {
+        padding-left: 0; /* Remove padding for better centering */
+        padding-right: 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 7vw;
+    }
+
+    .hero-subtitle {
+        font-size: 2vw;
+    }
+    .hero-content {
+        text-align: center;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+
+
 .team-member {
     margin-top: 40px;
     margin-bottom: 30px;
