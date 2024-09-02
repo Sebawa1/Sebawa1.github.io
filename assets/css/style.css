@@ -248,92 +248,92 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 
-.card__usm {
+.card   {
     border-radius: 10px;
     min-height: 260px;
     height: 100%;
   }
   
   
-  .card__usm.card-bg-black {
+  .card  .card-bg-black {
     background-color: #191919;
     color: white;
   }
 
-  .card__usm .card-title-white__usm {
+  .card   .card-title-white   {
     border-left: 3px solid #e5b300;
     color: white;
     padding-left: 1em!important;
   }
   
-  .card__usm .card-text-white__usm {
+  .card   .card-text-white   {
     color: white;
   }
   
-  .card__usm .card-title-black__usm {
+  .card   .card-title-black   {
     border-left: 3px solid #e5b300;
     color: #3b424c;
     padding-left: 1em;
   }
   
-  .card__usm .card-text-black__usm {
+  .card   .card-text-black   {
     color: #3b424c;
   }
 
 
-  #rrss .card-social__usm{
+  #rrss .card-social  {
     justify-content: center;
     text-align: center;
 }
-#rrss .card-social__usm .card-body{
+#rrss .card-social   .card-body{
     display: none;
 }
-#rrss .card-social__usm .social-link{
+#rrss .card-social   .social-link{
     opacity: .8;
     transition: all .2s ease-in-out;
 }
-#rrss .card-social__usm .social-link:hover{
+#rrss .card-social   .social-link:hover{
     opacity: 1;
 }
-#rrss .card-social__usm .social-link:hover.effect-hover__usm{
+#rrss .card-social   .social-link:hover.effect-hover  {
     margin-left: 1em;
 }
-#rrss .card-social__usm .card-header{
+#rrss .card-social   .card-header{
     background-color: transparent;
     border-bottom:none;
     padding: 20px 20px 10px 20px;
 }
-#rrss .card-social__usm .card-header .logo-social i{
+#rrss .card-social   .card-header .logo-social i{
     color: white;
     font-size: 60px;
 }
-#rrss .card-social__usm .card-footer{
+#rrss .card-social   .card-footer{
     background-color: transparent;
     border-top:none;
     padding: 10px 20px 20px 20px;
 }
-#rrss .card-social__usm .card-body .img-social__usm{
+#rrss .card-social   .card-body .img-social  {
     background-position: center;
     background-size: cover;
     height: 180px;
     width: 100%;
 }
-#rrss .card-facebook__usm{
+#rrss .card-facebook {
     background-color: #3B5998;
 }
-#rrss .card-instagram__usm{
+#rrss .card-instagram {
     background-color: #990099;
 }
-#rrss .card-twitter__usm{
+#rrss .card-twitter {
     background-color: #0EADD8;
 }
-#rrss .card-youtube__usm{
+#rrss .card-youtube {
   background-color: #ff0000;
 }
-#rrss .card-linkedin__usm{
+#rrss .card-linkedin {
     background-color: #0E76A8;
 }
-#rrss .card-tiktok__usm{
+#rrss .card-tiktok {
   background-color: #000000;
 }
 
