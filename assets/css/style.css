@@ -303,6 +303,93 @@ a, span {
 }
 
 
+#rrss .title-section {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: inline-block;
+    position: relative;
+  }
+  
+  #rrss .title-section:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 60%;
+    background-color: #e0d110; /* Color amarillo */
+  }
+  
+  .card__usm {
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 1rem;
+  }
+  
+  .card-facebook__usm {
+    background-color: #3b5998;
+  }
+  
+  .card-instagram__usm {
+    background-color: #c32aa3;
+  }
+  
+  .card-youtube__usm {
+    background-color: #ff0000;
+  }
+  
+  .card-tiktok__usm {
+    background-color: #000000;
+  }
+  
+  .card-header {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card-footer {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .logo-social {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  a.social-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a.social-link:hover {
+    text-decoration: underline;
+  }
+  
+  .effect-hover__usm:hover {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .col-iquals-h {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+
+
+
+
+
+
 
 /* Border Styles */
 .border-bottom-primary {
