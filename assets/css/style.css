@@ -236,62 +236,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: var(--color-heading);
 }
 
-/* Lists */
-ul, ol {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-/* Paragraphs */
-p {
-    margin: 0;
-}
-
-/* Links */
-a {
-    display: inline-block;
-    transition: all .3s ease-out;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/* Span */
-a, span {
-    display: inline-block;
-}
 
 
-.service-section {
-    text-align: center; /* Centra el contenido dentro de la sección */
-}
-.social-media-section {
-    background-color: #f4f4f4; /* Cambia esto al color de fondo que desees */
-}
 
-.social-media-section .container {
-    padding-left: 15px;
-    padding-right: 15px;
-}
 
-.social-media-section .row {
-    margin-left: -15px;
-    margin-right: -15px;
-}
-
-.social-media-section .col-lg-3 {
-    margin-bottom: 30px;
-}
-
-.social-media-section .twitter-timeline,
-.social-media-section .LI-profile-badge,
-.social-media-section .tiktok-embed,
-.social-media-section .fb-page {
-    max-width: 100%;
-    width: 100%;
-}
 
 .instagram-media {
     max-width: 1000px; /* Ajusta el tamaño máximo del Instagram */
@@ -303,87 +251,74 @@ a, span {
 }
 
 
-#rrss .title-section {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    display: inline-block;
-    position: relative;
-  }
-  
-  #rrss .title-section:before {
-    content: "";
-    position: absolute;
-    left: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 60%;
-    background-color: #e0d110; /* Color amarillo */
-  }
-  
-  .card__usm {
-    border-radius: 12px;
-    color: white;
+#rrss .card__usm {
+    border-radius: 10px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 1rem;
-  }
-  
-  .card-facebook__usm {
-    background-color: #3b5998;
-  }
-  
-  .card-instagram__usm {
-    background-color: #c32aa3;
-  }
-  
-  .card-youtube__usm {
-    background-color: #ff0000;
-  }
-  
-  .card-tiktok__usm {
-    background-color: #000000;
-  }
-  
-  .card-header {
+    padding: 20px;
+    color: #fff;
+}
+
+#rrss .card-header {
     font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  .card-footer {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  
-  .logo-social {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  a.social-link {
-    color: white;
+    margin-bottom: 20px;
+}
+
+#rrss .card-footer {
+    font-size: 1.2rem;
+}
+
+.card-facebook__usm {
+    background-color: #3b5998;
+}
+
+.card-instagram__usm {
+    background-color: #c32aa3;
+}
+
+.card-youtube__usm {
+    background-color: #ff0000;
+}
+
+.card-tiktok__usm {
+    background-color: #000000;
+}
+
+.card__usm .social-link {
+    color: #fff;
     text-decoration: none;
-  }
-  
-  a.social-link:hover {
+}
+
+.card__usm .social-link:hover {
     text-decoration: underline;
-  }
-  
-  .effect-hover__usm:hover {
-    transform: translateX(5px);
-    transition: transform 0.3s ease;
-  }
-  
-  @media (max-width: 768px) {
-    .col-iquals-h {
-      margin-bottom: 1.5rem;
-    }
-  }
-  
+}
+
+.card__usm .fab {
+    font-size: 3rem;
+}
+
+.card__usm .full-w {
+    display: block;
+    width: 100%;
+}
+
+.title-section {
+    font-weight: bold;
+    font-size: 2rem;
+    border-left: 5px solid #e0d110;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.card__usm {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card__usm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 
 
 
