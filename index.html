@@ -250,6 +250,49 @@
         .footer-white-color {
             color: #fff;
         }
+        .footer-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        .footer-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .footer-detail,
+        .footer-list {
+            flex: 1;
+            margin: 1rem;
+        }
+        .footer-detail {
+            max-width: 250px;
+        }
+        .footer-social {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 1rem;
+        }
+        .footer-social ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .footer-social ul li {
+            list-style: none;
+        }
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
         .social-logo {
             width: 24px;
             height: 24px;
@@ -263,11 +306,9 @@
         .link-underline:hover {
             color: #e0d110; /* Color primario-2 */
         }
-        .footer-wrapper {
-            padding: 1rem 0;
-        }
         .footer h6 {
             color: #fff;
+            margin-bottom: 1rem;
         }
         .c-grey-1 {
             color: #fff;
@@ -285,21 +326,6 @@
         .footer-list a:hover {
             color: #e0d110;
         }
-        .footer-copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 2rem;
-            padding-top: 1rem;
-            text-align: center;
-            color: #fff;
-        }
-        .footer-social i {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-        }
-        .footer-social a:hover i {
-            color: #e0d110;
-        }
         .footer-pattern {
             background-size: cover;
             height: 100px;
@@ -307,89 +333,72 @@
             margin-top: 1rem;
         }
     </style>
-
     <div class="footer-wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
-                <div class="footer-row">
-
-                    
-                    <div class="footer-detail">
-                        <a href="/">
-                            <img src="./assets/images/logo.png" alt="footer-logo">
+        <div class="container">
+            <div class="footer-row">
+                <div class="footer-detail">
+                    <a href="/">
+                        <img src="./assets/images/logo.png" alt="footer-logo">
+                    </a>
+                    <p class="c-grey-1">ARmadillo es una aplicación móvil diseñada para mejorar la comprensión lectora de niños de primero y segundo básico mediante el uso de Realidad Aumentada.</p>
+                    <div class="links">
+                        <a class="link-underline" href="mailto:armadilloapp.cl@gmail.com">
+                            <span>armadilloapp.cl@gmail.com</span>
                         </a>
-                        <p class="c-grey-1">ARmadillo es una aplicación móvil diseñada para mejorar la comprensión lectora de niños de primero y segundo básico mediante el uso de Realidad Aumentada.</p>
-                        <div class="links">
-                            <a class="link-underline" href="mailto:armadilloapp.cl@gmail.com">
-                                <span>armadilloapp.cl@gmail.com</span>
+                    </div>
+                </div>
+                <div class="footer-list footer-social">
+                    <h6>Síguenos</h6>
+                    <ul>
+                        <li class="facebook">
+                            <a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" class="link-underline" target="_blank" rel="noreferrer">
+                                <i class="fab fa-facebook"></i><span>Facebook</span>
                             </a>
-                        </div>
-                    </div>
-
-
-                    <div class="footer-list footer-social">
-                        <h6>Síguenos</h6>
-                        <ul>
-                            <table>
-                                <thead>
-                                    
-                                </thead><tbody><tr><td>
-                                    <li class="facebook">
-                                        <a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" class="link-underline" target="_blank" rel="noreferrer">
-                                            <i class="fab fa-facebook"></i></a></li></td><td><li class="facebook">
-                                                <a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" class="link-underline" target="_blank" rel="noreferrer">
-                                                    <span>Facebook</span></a></li></td></tr><tr><td>
-                                    <li class="linkedin">
-                                        <a href="https://www.linkedin.com/company/armadilloapp" class="link-underline" target="_blank" rel="noreferrer">
-                                            <i class="fab fa-instagram"></i></a></li></td><td><li class="instagram">
-                                                <a href="https://www.linkedin.com/company/armadilloapp" class="link-underline" target="_blank" rel="noreferrer">
-                                                    <span>Instagram</span></a></li></td></tr><tr><td>
-                                    <li class="youtube">
-                                        <a href="https://www.youtube.com/@ARmadilloApp" class="link-underline" target="_blank" rel="noreferrer">
-                                            <i class="fab fa-youtube"></i></a></li></td><td><li class="youtube">
-                                                <a href="https://www.youtube.com/@ARmadilloApp" class="link-underline" target="_blank" rel="noreferrer">
-                                                    <span>Youtube</span></a></li></td></tr></tbody></table></ul>
-                    </div>
-
-
-                    <div class="footer-list">
-                        <h6>Navegación</h6><ul>
-                            <li><a class="link-underline" href="/about"><span>Sobre Nosotros</span></a></li>
-                            <li><a class="link-underline" href="/about2"><span>Sobre Armadillo</span></a></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="footer-list">
-                        <h6>Descubre Más</h6>
-                        <ul>
-                            <li><a class="link-underline" href="/planes"><span>Planes</span></a></li>
-                            <li><a class="link-underline" href="/contact"><span>Contacto</span></a></li>
-                            <li class="youtube"><a href="https://maps.app.goo.gl/jjXZ6oDQLfY6t87r5" class="link-underline" target="_blank" rel="noreferrer"><span>Como llegar</span></a></li>
-                        </ul>
-                    </div>
-
-
-                    <div class="footer-list">
-                        <h6>Somos parte de</h6><ul><li><a href="https://www.feriadesoftware.cl/" class="link-underline" target="_blank" rel="noreferrer">
-                            <img src="./assets/images/fesw.png" alt="footer-logo" width="200"></a></li></ul>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="instagram">
+                            <a href="https://www.linkedin.com/company/armadilloapp" class="link-underline" target="_blank" rel="noreferrer">
+                                <i class="fab fa-instagram"></i><span>Instagram</span>
+                            </a>
+                        </li>
+                        <li class="youtube">
+                            <a href="https://www.youtube.com/@ARmadilloApp" class="link-underline" target="_blank" rel="noreferrer">
+                                <i class="fab fa-youtube"></i><span>Youtube</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h6>Navegación</h6>
+                    <ul>
+                        <li><a class="link-underline" href="/about"><span>Sobre Nosotros</span></a></li>
+                        <li><a class="link-underline" href="/about2"><span>Sobre Armadillo</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h6>Descubre Más</h6>
+                    <ul>
+                        <li><a class="link-underline" href="/planes"><span>Planes</span></a></li>
+                        <li><a class="link-underline" href="/contact"><span>Contacto</span></a></li>
+                        <li class="youtube"><a href="https://maps.app.goo.gl/jjXZ6oDQLfY6t87r5" class="link-underline" target="_blank" rel="noreferrer"><span>Como llegar</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-list">
+                    <h6>Somos parte de</h6>
+                    <ul>
+                        <li><a href="https://www.feriadesoftware.cl/" class="link-underline" target="_blank" rel="noreferrer">
+                            <img src="./assets/images/fesw.png" alt="footer-logo" width="200">
+                        </a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-10 offset-1">
-                <div class="footer-copyright c-grey-1"><h6>© ARmadillo</h6></div>
-                </div>
+            <div class="footer-copyright">
+                <h6>&copy; ARmadillo</h6>
             </div>
-        </div>
-        <div class="footer-pattern" style="background-image: url(&quot;/static/media/pattern-1.bf447cceb70178061f43.jpg&quot;);">
-
         </div>
     </div>
+    <div class="footer-pattern" style="background-image: url('/static/media/pattern-1.bf447cceb70178061f43.jpg');"></div>
 </footer>
+
 
 
 
