@@ -245,7 +245,10 @@
     <style>
         .bg-blue {
             background-color: #4494ff;
-            padding: 2rem; /* Ajusta usando rem */
+            padding: 3rem 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .footer-white-color {
             color: #fff;
@@ -253,78 +256,74 @@
         .footer-wrapper {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-        .footer-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
+            max-width: 1200px;
             width: 100%;
         }
-        .footer-detail,
-        .footer-list {
+        .footer-column {
             flex: 1;
+            min-width: 200px;
             margin: 1rem;
+            text-align: left;
         }
         .footer-detail {
+            text-align: center;
             max-width: 250px;
-        }
-        .footer-social {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin: 1rem;
+            margin: auto;
         }
         .footer-social ul {
             display: flex;
             flex-direction: column;
-            gap: 0.5rem;
+            gap: 1rem;
+            padding: 0;
         }
         .footer-social ul li {
             list-style: none;
+            font-size: 1rem;
         }
-        .footer-copyright {
-            width: 100%;
-            text-align: center;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        .footer-social ul li a {
+            display: flex;
+            align-items: center;
             color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
         }
-        .social-logo {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-            vertical-align: middle;
-        }
-        .link-underline {
-            text-decoration: underline;
-            color: #fff;
-        }
-        .link-underline:hover {
+        .footer-social ul li a:hover {
             color: #e0d110; /* Color primario-2 */
         }
-        .footer h6 {
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-        .c-grey-1 {
-            color: #fff;
+        .footer-social ul li i {
+            margin-right: 10px;
+            font-size: 1.5rem;
         }
         .footer-list ul {
             list-style: none;
             padding: 0;
         }
         .footer-list li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
         .footer-list a {
             color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
         .footer-list a:hover {
             color: #e0d110;
+            text-decoration: underline;
+        }
+        .footer-logo {
+            width: 200px;
+            margin-bottom: 1rem;
+        }
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            color: #fff;
         }
         .footer-pattern {
             background-size: cover;
@@ -334,75 +333,48 @@
         }
     </style>
     <div class="footer-wrapper">
-        <div class="container">
-            <div class="footer-row">
-                <div class="footer-detail">
-                    <a href="/">
-                        <img src="./assets/images/logo.png" alt="footer-logo">
-                    </a>
-                    <p class="c-grey-1">ARmadillo es una aplicación móvil diseñada para mejorar la comprensión lectora de niños de primero y segundo básico mediante el uso de Realidad Aumentada.</p>
-                    <div class="links">
-                        <a class="link-underline" href="mailto:armadilloapp.cl@gmail.com">
-                            <span>armadilloapp.cl@gmail.com</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-list footer-social">
-                    <h6>Síguenos</h6>
-                    <ul>
-                        <li class="facebook">
-                            <a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" class="link-underline" target="_blank" rel="noreferrer">
-                                <i class="fab fa-facebook"></i><span>Facebook</span>
-                            </a>
-                        </li>
-                        <li class="instagram">
-                            <a href="https://www.linkedin.com/company/armadilloapp" class="link-underline" target="_blank" rel="noreferrer">
-                                <i class="fab fa-instagram"></i><span>Instagram</span>
-                            </a>
-                        </li>
-                        <li class="youtube">
-                            <a href="https://www.youtube.com/@ARmadilloApp" class="link-underline" target="_blank" rel="noreferrer">
-                                <i class="fab fa-youtube"></i><span>Youtube</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h6>Navegación</h6>
-                    <ul>
-                        <li><a class="link-underline" href="/about"><span>Sobre Nosotros</span></a></li>
-                        <li><a class="link-underline" href="/about2"><span>Sobre Armadillo</span></a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h6>Descubre Más</h6>
-                    <ul>
-                        <li><a class="link-underline" href="/planes"><span>Planes</span></a></li>
-                        <li><a class="link-underline" href="/contact"><span>Contacto</span></a></li>
-                        <li class="youtube"><a href="https://maps.app.goo.gl/jjXZ6oDQLfY6t87r5" class="link-underline" target="_blank" rel="noreferrer"><span>Como llegar</span></a></li>
-                    </ul>
-                </div>
-                <div class="footer-list">
-                    <h6>Somos parte de</h6>
-                    <ul>
-                        <li><a href="https://www.feriadesoftware.cl/" class="link-underline" target="_blank" rel="noreferrer">
-                            <img src="./assets/images/fesw.png" alt="footer-logo" width="200">
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <h6>&copy; ARmadillo</h6>
-            </div>
+        <div class="footer-column footer-detail">
+            <a href="/">
+                <img src="./assets/images/logo.png" alt="footer-logo" class="footer-logo">
+            </a>
+            <p>ARmadillo es una aplicación móvil diseñada para mejorar la comprensión lectora de niños de primero y segundo básico mediante el uso de Realidad Aumentada.</p>
+            <a href="mailto:armadilloapp.cl@gmail.com" class="link-underline">armadilloapp.cl@gmail.com</a>
         </div>
+        <div class="footer-column footer-social">
+            <h6>Síguenos</h6>
+            <ul>
+                <li><a href="https://www.facebook.com/people/ARmadillo-App/61563489384240/" target="_blank" rel="noreferrer"><i class="fab fa-facebook"></i>Facebook</a></li>
+                <li><a href="https://www.linkedin.com/company/armadilloapp" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i>Instagram</a></li>
+                <li><a href="https://www.youtube.com/@ARmadilloApp" target="_blank" rel="noreferrer"><i class="fab fa-youtube"></i>Youtube</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-list">
+            <h6>Navegación</h6>
+            <ul>
+                <li><a href="/about">Sobre Nosotros</a></li>
+                <li><a href="/about2">Sobre ARmadillo</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-list">
+            <h6>Descubre Más</h6>
+            <ul>
+                <li><a href="/planes">Planes</a></li>
+                <li><a href="/contact">Contacto</a></li>
+                <li><a href="https://maps.app.goo.gl/jjXZ6oDQLfY6t87r5" target="_blank" rel="noreferrer">Cómo llegar</a></li>
+            </ul>
+        </div>
+        <div class="footer-column footer-list">
+            <h6>Somos parte de</h6>
+            <a href="https://www.feriadesoftware.cl/" target="_blank" rel="noreferrer">
+                <img src="./assets/images/fesw.png" alt="footer-logo" width="200">
+            </a>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        &copy; 2024 ARmadillo
     </div>
     <div class="footer-pattern" style="background-image: url('/static/media/pattern-1.bf447cceb70178061f43.jpg');"></div>
 </footer>
-
-
-
-
-
 
 
 
