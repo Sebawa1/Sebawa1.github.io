@@ -602,6 +602,45 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+.carousel {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(1);
+}
+.section-title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    position: relative;
+}
+.section-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 60px;
+    background-color: #4494ff;
+}
+.section-content {
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+.footer-logo {
+    max-width: 150px;
+}
+
 
 /* Border Styles */
 .border-bottom-primary {
