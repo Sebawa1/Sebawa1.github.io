@@ -44,7 +44,7 @@ img.fluid {
     background-color: var(--color-primary-6); /* Color de fondo de la barra de navegación */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
     padding: 0 1.5rem; /* Espaciado interno */
-    width: 100%; /* Set the width to 100% */
+    width: 300%; 
     max-width: none; /* Remove the max-width restriction */
     
 }
@@ -152,6 +152,8 @@ img.fluid {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #about .section-background:hover {
@@ -471,9 +473,11 @@ img.fluid {
 
 
 
-/* Estilos Generales */
+/* Animación de las tarjetas */
+
 #about_t {
-    background: #f4f4f4; /* Color de fondo suave para la sección */
+    background: var(--color-primary-1);
+    opacity: 0.9;
     padding: 40px 0;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -486,7 +490,6 @@ img.fluid {
     color: #333;
 }
 
-/* Contenedor de las tarjetas */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -494,7 +497,6 @@ img.fluid {
     justify-content: center;
 }
 
-/* Estilo de las tarjetas */
 .card {
     position: relative;
     width: 300px;
@@ -545,7 +547,7 @@ img.fluid {
     text-align: center;
 }
 
-/* Estilo de las tarjetas circulares */
+/* Efecto Hover en Tarjetas Circulares */
 .circular-card {
     width: 150px;
     height: 150px;
@@ -589,7 +591,13 @@ img.fluid {
     opacity: 1;
 }
 
-/* Estilo de la tarjeta flip */
+.team-member {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
 .flip-card {
     background-color: transparent;
     perspective: 500px;
@@ -605,7 +613,7 @@ img.fluid {
     height: 100%;
     text-align: center;
     transition: transform 0.8s ease-in-out, margin-left 0.2s;
-    transform-style: preserve-3d;
+    transform-style : preserve-3d;
     will-change: transform;
 }
 
@@ -617,21 +625,21 @@ img.fluid {
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
-    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
     height: 100%;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px; /* Circular si es necesario */
-    overflow: hidden;
+    border-radius: 50%; /* Circular */
+    overflow: visible; /* Ocultar contenido fuera del círculo */
 }
 
 .flip-card-front img, .flip-card-back img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px; /* Ajuste para las tarjetas circulares */
+    border-radius: 100%; /* Circular */
 }
 
 .flip-card-back {
@@ -662,16 +670,15 @@ img.fluid {
     width: 90%; /* Ajuste del ancho del contenido */
 }
 
-.team-name {
-    font-weight: bold;
-}
-
 .linkedin-icon {
     font-size: 30px;
-    color: #0077b5; /* Color de LinkedIn */
+    color: #ffffff;
     text-decoration: none;
     margin-top: 10px;
 }
+
+
+
 
 
 
