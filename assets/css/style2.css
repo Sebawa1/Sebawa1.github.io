@@ -43,18 +43,26 @@ img.fluid {
 .navbar {
     background-color: var(--color-primary-6); /* Color de fondo de la barra de navegación */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
-    padding: 0 1.5rem; /* Espaciado interno */
+    padding: 0 2rem; /* Espaciado interno ajustado */
     width: 100%; 
-    max-width: none; /* Remove the max-width restriction */
-    
+    max-width: none; /* Quita cualquier restricción de ancho máximo */
 }
 
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Ajuste del tamaño de la fuente */
     font-weight: bold;
     color: var(--color-primary-3);
     text-transform: uppercase;
 }
+
+.nav-link {
+    color: var(--color-primary-3);
+    font-weight: 500;
+    padding: 10px 30px; /* Ajuste del padding */
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+}
+
 
 .navbar-toggler {
     border: none;
@@ -73,14 +81,6 @@ img.fluid {
     transform: rotate(90deg); /* Rotación del ícono de menú al pasar el cursor */
 }
 
-/* Estilos para los enlaces de navegación */
-.nav-link {
-    color: var(--color-primary-3);
-    font-weight: 500;
-    padding: 10px 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
-    text-transform: uppercase;
-}
 
 .nav-link:hover {
     color: var(--color-primary-2); /* Color al pasar el cursor */
@@ -490,6 +490,7 @@ img.fluid {
     color: #333;
 }
 
+/* Contenedor de las tarjetas */
 .card-container {
     display: flex;
     justify-content: center;
@@ -497,12 +498,14 @@ img.fluid {
     gap: 2rem;
 }
 
+/* Estilos generales para cada miembro del equipo */
 .team-member {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px; /* Ajusta el ancho de las tarjetas */
+    height: 400px; /* Ajusta la altura de las tarjetas */
 }
 
+/* Estilos para el contenedor de la tarjeta con flip */
 .flip-card {
     background-color: transparent;
     perspective: 1000px;
@@ -510,6 +513,7 @@ img.fluid {
     height: 100%;
 }
 
+/* Contenedor interior de la tarjeta con efecto flip */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -518,20 +522,23 @@ img.fluid {
     transform-style: preserve-3d;
 }
 
+/* Efecto de rotación al pasar el cursor */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
+/* Estilos para el lado frontal de la tarjeta */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 50%;
+    border-radius: 15px; /* Cambia el radio para bordes más redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
+/* Estilos específicos para el lado frontal */
 .flip-card-front {
     background-color: var(--color-primary-4);
     display: flex;
@@ -539,12 +546,14 @@ img.fluid {
     justify-content: center;
 }
 
+/* Ajusta el tamaño de la imagen en el lado frontal */
 .flip-card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Estilos específicos para el lado trasero */
 .flip-card-back {
     background-color: var(--color-primary-5);
     transform: rotateY(180deg);
@@ -556,6 +565,7 @@ img.fluid {
     position: relative;
 }
 
+/* Contenido de la parte trasera */
 .flip-card-back .info {
     background-color: white;
     border-radius: 15px;
@@ -564,6 +574,7 @@ img.fluid {
     width: 100%;
 }
 
+/* Imagen del armadillo en la parte trasera */
 .flip-card-back .armadillo-img {
     position: absolute;
     top: -30px;
@@ -578,11 +589,13 @@ img.fluid {
     justify-content: center;
 }
 
+/* Ajusta la imagen del armadillo */
 .flip-card-back .armadillo-img img {
     width: 100%;
     border-radius: 50%;
 }
 
+/* Estilo para el nombre y el cargo en la parte trasera */
 .flip-card-back .details .name {
     font-size: 1.2rem;
     font-weight: bold;
@@ -594,6 +607,7 @@ img.fluid {
     color: var(--color-primary-3);
 }
 
+/* Estilo para el ícono de LinkedIn */
 .linkedin-icon {
     font-size: 1.5rem;
     color: #0077b5;
