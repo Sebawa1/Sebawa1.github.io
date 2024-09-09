@@ -30,6 +30,11 @@ img {
     transition: all .3s ease-out;
 }
 
+img.fluid {
+    width: 30%;
+    height: auto;
+}
+
 .slick-slide img {
     display: inline-block;
 }
@@ -273,7 +278,7 @@ nav ul li a {
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
-    -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; 
     height: 100%;
     backface-visibility: hidden;
     display: flex;
@@ -291,7 +296,7 @@ nav ul li a {
 }
 
 .flip-card-back {
-    background-color: var(--color-primary-3);
+    background-color: var(--color-primary-2);
     transform: rotateY(-180deg);
 }
 
@@ -312,7 +317,7 @@ nav ul li a {
 }
 
 .info {
-    background-color: var(--color-primary-4);
+    background-color: var(--color-primary-3);
     padding: 10px;
     border-radius: 30px;
     width: 90%; /* Ajuste del ancho del contenido */
