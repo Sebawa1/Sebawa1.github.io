@@ -266,68 +266,6 @@ img.fluid {
 
 /* Estilos de carrusel */
 
-.carousel-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 15px; /* Esquinas redondeadas del carrusel */
-    border: 2px solid #ddd; /* Borde del carrusel */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra del carrusel */
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel-item {
-    display: flex;
-    width: 100%;
-    flex-shrink: 0;
-}
-
-.carousel-text {
-    flex: 1;
-    padding: 20px;
-}
-
-.carousel-image {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.carousel-nav {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-
-.carousel-nav button {
-    background-color: rgba(0,0,0,0.5);
-    border: none;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-nav button:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
 
 .extra-lines {
     font-size: 1.1rem;
@@ -639,111 +577,126 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 
-.card   {
+#rrss {
+    padding: 40px 0;
+}
+
+.title-section {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.video-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-right: 20px; /* Espacio entre el video y el Instagram */
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.instagram-media {
+    width: 100%;
+    max-width: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+@media (min-width: 768px) {
+    .video-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.card {
     border-radius: 10px;
     min-height: 260px;
     height: 100%;
-    overflow: hidden; 
-  }
-  
-  
-  .card  .card-bg-black {
-    background-color: #191919;
-    color: white;
-  }
+    overflow: hidden;
+}
 
-  .card   .card-title-white   {
-    border-left: 3px solid #e5b300;
-    color: white;
-    padding-left: 1em!important;
-  }
-  
-  .card   .card-text-white   {
-    color: white;
-  }
-  
-  .card   .card-title-black   {
-    border-left: 3px solid #e5b300;
-    color: #3b424c;
-    padding-left: 1em;
-  }
-  
-  .card   .card-text-black   {
-    color: #3b424c;
-  }
-
-
-  #rrss .card-social {
+.card-social {
     display: flex;
-    flex-direction: column; /* Asegura que los elementos estén en una columna */
+    flex-direction: column;
     justify-content: center;
     text-align: center;
-    height: 100%; /* Ocupa toda la altura disponible */
+    height: 100%;
+    background-color: #fff; /* Fondo blanco para las tarjetas */
 }
 
-#rrss .card-social .card-body {
-    display: block; /* Asegura que el contenido del body se muestre */
-    padding: 15px; /* Ajusta el padding según sea necesario */
+.card-social .card-body {
+    padding: 15px;
 }
 
-#rrss .card-social   .social-link{
+.card-social .social-link {
     opacity: .8;
     transition: all .2s ease-in-out;
 }
-#rrss .card-social   .social-link:hover{
+
+.card-social .social-link:hover {
     opacity: 1;
 }
-#rrss .card-social   .social-link:hover.effect-hover  {
-    margin-left: 1em;
-}
-#rrss .card-social   .card-header{
+
+.card-social .card-header {
     background-color: transparent;
-    border-bottom:none;
+    border-bottom: none;
     padding: 20px 20px 10px 20px;
 }
-#rrss .card-social   .card-header .logo-social i{
-    color: white;
-    font-size: 60px;
+
+.card-social .logo-social {
+    margin-bottom: 10px;
 }
 
-#rrss .card-social .card-footer {
-    background-color: #191919; 
-    color: rgb(0, 0, 0); 
-    border-top: none;
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    box-sizing: border-box; 
+.card-social .logo-social img {
+    max-width: 60px;
+    height: auto;
 }
 
-#rrss .card-social   .card-body .img-social  {
-    background-position: center;
-    background-size: cover;
-    height: 180px;
-    width: 100%;
-}
-#rrss .card-facebook {
-    background-color: #3B5998;
-}
-#rrss .card-instagram {
-    background-color: #990099;
-}
-#rrss .card-twitter {
-    background-color: #0EADD8;
-}
-#rrss .card-youtube {
-  background-color: #ff0000;
-}
-#rrss .card-linkedin {
-    background-color: #0E76A8;
-}
-#rrss .card-tiktok {
-  background-color: #000000;
-}
+.card-facebook { background-color: #3B5998; }
+.card-instagram { background-color: #990099; }
+.card-twitter { background-color: #0EADD8; }
+.card-youtube { background-color: #ff0000; }
+.card-linkedin { background-color: #0E76A8; }
+.card-tiktok { background-color: #000000; }
 
+@media (max-width: 767px) {
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .video-responsive-container {
+        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
+        margin-bottom: 20px;
+    }
 
+    .instagram-media {
+        width: 100%;
+    }
+}
 
 
 

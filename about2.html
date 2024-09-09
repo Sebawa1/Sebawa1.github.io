@@ -33,6 +33,84 @@
     <meta name="author" content="ARmadillo"> 
     
     <title>ARmadillo - Sobre ARmadillo</title>
+    <style>
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 15px;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            display: flex;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .carousel-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .carousel-image {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .carousel-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-nav button {
+            background-color: rgba(0,0,0,0.5);
+            border: none;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .carousel-nav button:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
     
 </head>
 
@@ -85,7 +163,7 @@
                             <p class="extra-lines">Los estaremos esperando el 15 de Noviembre en la XXXII Feria de Software. 🥳😁</p>
                         </div>
                         <div class="carousel-image">
-                            <img src="./assets/images/feliz.png" alt="ARmadillo" class="img-fluid">
+                            <img src="https://via.placeholder.com/300" alt="ARmadillo">
                         </div>
                     </div>
                     <!-- Puedes agregar más items aquí -->
@@ -118,8 +196,33 @@
             </div>
         </section>
     </div>
-    
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slide = document.querySelector('.carousel-slide');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -100 * currentIndex;
+                slide.style.transform = `translateX(${offset}%)`;
+            }
+
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+
+            updateCarousel();
+        });
+    </script>
     
     <!-- Footer -->
     <footer class="template-footer bg-blue footer-white-color">
