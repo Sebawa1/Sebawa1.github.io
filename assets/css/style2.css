@@ -473,41 +473,49 @@ img.fluid {
 
 
 
-/* Animación de las tarjetas */
+/*Recuperando las tarjetas*/
 
-/* Estilo para el contenedor del equipo */
-.card-container {
-    text-align: center;
+/* Estilos para la sección del equipo */
+.team-section {
+    background-color: #f9f9f9; /* Color de fondo de la sección */
     padding: 2rem;
-    background-color: var(--color-primary-4); /* Color de fondo para el contenedor */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.card-container h2 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
+.team-container {
+    background-color: #ffffff; /* Fondo blanco del contenedor de tarjetas */
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
     color: var(--color-primary-3);
 }
 
-/* Contenedor con fondo blanco y sombra */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
 .team-member {
     position: relative;
     width: 200px;
     height: 200px;
-    background-color: white; /* Fondo blanco para las tarjetas */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-    overflow: hidden; /* Evita que el contenido se desborde */
+    background-color: white; /* Fondo blanco detrás de las tarjetas */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-/* Estilo para las filas de miembros del equipo */
-.team-row {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* Estilo para la tarjeta de voltear */
+/* Flip card styles */
 .flip-card {
     background-color: transparent;
     perspective: 1000px;
@@ -515,7 +523,6 @@ img.fluid {
     height: 100%;
 }
 
-/* Estilo para el contenido interior de la tarjeta */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -524,25 +531,20 @@ img.fluid {
     transform-style: preserve-3d;
 }
 
-/* Estilo para el efecto de voltear la tarjeta */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Estilo para el frente y la parte trasera de la tarjeta */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
     border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
-/* Estilo para la parte frontal de la tarjeta */
 .flip-card-front {
-    background-color: var(--color-primary-4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -554,62 +556,60 @@ img.fluid {
     object-fit: cover;
 }
 
-/* Estilo para la parte trasera de la tarjeta */
 .flip-card-back {
-    background-color: var(--color-primary-5);
+    background-color: var(--color-primary-5); /* Color de fondo de la parte trasera */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    position: relative;
+    padding: 10px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.flip-card-back .info {
-    background-color: white;
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-    width: 100%;
-}
-
-.flip-card-back .armadillo-img {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+.back-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
-.flip-card-back .armadillo-img img {
-    width: 100%;
+.armadillo-img {
+    background-color: var(--color-primary-4); /* Color del círculo del armadillo */
     border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
-.flip-card-back .details .name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--color-primary-3);
+.armadillo-img img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
 }
 
-.flip-card-back .details .position {
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.info .name {
     font-size: 1rem;
-    color: var(--color-primary-3);
+    font-weight: bold;
 }
 
-.linkedin-icon {
-    font-size: 1.5rem;
-    color: #0077b5;
-    text-decoration: none;
-    margin-top: 10px;
+.info .position {
+    font-size: 0.875rem;
+    margin: 5px 0;
 }
+
+.info .linkedin-icon {
+    color: white;
+    font-size: 1.25rem;
+}
+
+
 
 
 
