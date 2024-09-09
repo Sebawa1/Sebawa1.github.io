@@ -268,36 +268,40 @@ img.fluid {
 
 .carousel-container {
     position: relative;
-    overflow: hidden;
     width: 100%;
-    max-width: 800px; /* Ajustar el ancho máximo del carrusel */
-    margin: auto;
+    overflow: hidden;
+    border-radius: 15px; /* Esquinas redondeadas del carrusel */
+    border: 2px solid #ddd; /* Borde del carrusel */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra del carrusel */
 }
 
 .carousel-slide {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efecto de libro */
-    width: 100%;
+    transition: transform 0.5s ease;
 }
 
 .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 .carousel-text {
-    background-color: var(--color-primary-4);
-    color: var(--color-primary-5);
-    padding: 2rem;
-    text-align: justify;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    flex: 1;
+    padding: 20px;
 }
 
-.carousel-item img {
-    width: 100%;
+.carousel-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-image img {
+    max-width: 100%;
     height: auto;
-    display: block;
+    border-radius: 10px;
 }
 
 .carousel-nav {
@@ -310,18 +314,20 @@ img.fluid {
 }
 
 .carousel-nav button {
-    background-color: var(--color-primary-2);
+    background-color: rgba(0,0,0,0.5);
     border: none;
-    color: white;
-    padding: 0.5rem 1rem;
+    color: #fff;
+    padding: 10px;
     cursor: pointer;
+    border-radius: 50%;
     font-size: 1.5rem;
     transition: background-color 0.3s ease;
 }
 
 .carousel-nav button:hover {
-    background-color: var(--color-primary-3);
+    background-color: rgba(0,0,0,0.8);
 }
+
 
 .extra-lines {
     font-size: 1.1rem;
@@ -340,6 +346,7 @@ img.fluid {
 
 /* Estilos generales para el contenedor de la sección | Tarjetas*/
 
+/* Estilos para la sección del equipo */
 /* Estilos para la sección del equipo */
 .team-section {
     background-color: #f9f9f9; /* Color de fondo de la sección */
@@ -363,6 +370,7 @@ img.fluid {
     color: var(--color-primary-3);
 }
 
+/* Contenedor de las tarjetas */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -370,20 +378,20 @@ img.fluid {
     justify-content: center;
 }
 
+/* Estilos de las tarjetas */
 .team-member {
     position: relative;
     width: 200px;
     height: 200px;
     background-color: white; /* Fondo blanco detrás de las tarjetas */
-    border-radius: 50%;
+    border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    perspective: 1000px; /* Profundidad de perspectiva para el giro */
 }
 
-/* Flip card styles */
+/* Estilos del contenedor de la tarjeta */
 .flip-card {
-    background-color: transparent;
-    perspective: 1000px;
     width: 100%;
     height: 100%;
 }
@@ -396,7 +404,7 @@ img.fluid {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.team-member:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -405,7 +413,7 @@ img.fluid {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 50%;
+    border-radius: 15px; /* Bordes redondeados para que coincidan con el contenedor */
     overflow: hidden;
 }
 
@@ -413,6 +421,7 @@ img.fluid {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff; /* Fondo blanco para la parte delantera */
 }
 
 .flip-card-front img {
@@ -473,9 +482,6 @@ img.fluid {
     color: white;
     font-size: 1.25rem;
 }
-
-
-
 
 
 .bg-blue {
