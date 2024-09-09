@@ -43,15 +43,9 @@ img.fluid {
 .navbar {
     background-color: var(--color-primary-6); /* Color de fondo de la barra de navegación */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
-    padding: 0 1.5rem; 
-    /*escribir aqui espaciado vertical del navbar*/
-    /* Espaciado interno de la barra de navegación */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    transition: background-color 0.3s ease; /* Transición de color de fondo */
+    padding: 0 1.5rem; /* Espaciado interno */
+    width: 100%; /* Set the width to 100% */
+    max-width: none; /* Remove the max-width restriction */
     
 }
 
@@ -81,7 +75,7 @@ img.fluid {
 
 /* Estilos para los enlaces de navegación */
 .nav-link {
-    color: #343a40;
+    color: var(--color-primary-3);
     font-weight: 500;
     padding: 10px 20px;
     transition: color 0.3s ease, transform 0.3s ease;
@@ -465,7 +459,7 @@ img.fluid {
     overflow: hidden;
     max-width: 100%;
 }
-/*
+
 .video-responsive-container iframe {
     position: absolute;
     top: 0;
@@ -474,14 +468,25 @@ img.fluid {
     height: 100%;
 }
 
- Contenedor del video responsivo */
-.video-responsive-container iframe {
-    width: 100%;
-    height: auto;
+
+
+
+/* Estilos Generales */
+#about_t {
+    background: #f4f4f4; /* Color de fondo suave para la sección */
+    padding: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+#about_t h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
 
-/* Animación de las tarjetas */
+/* Contenedor de las tarjetas */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -489,6 +494,7 @@ img.fluid {
     justify-content: center;
 }
 
+/* Estilo de las tarjetas */
 .card {
     position: relative;
     width: 300px;
@@ -539,7 +545,7 @@ img.fluid {
     text-align: center;
 }
 
-/* Efecto Hover en Tarjetas Circulares */
+/* Estilo de las tarjetas circulares */
 .circular-card {
     width: 150px;
     height: 150px;
@@ -583,13 +589,7 @@ img.fluid {
     opacity: 1;
 }
 
-.team-member {
-    margin-top: 40px;
-    margin-bottom: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
+/* Estilo de la tarjeta flip */
 .flip-card {
     background-color: transparent;
     perspective: 500px;
@@ -605,7 +605,7 @@ img.fluid {
     height: 100%;
     text-align: center;
     transition: transform 0.8s ease-in-out, margin-left 0.2s;
-    transform-style : preserve-3d;
+    transform-style: preserve-3d;
     will-change: transform;
 }
 
@@ -617,21 +617,21 @@ img.fluid {
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
-    -webkit-backface-visibility: hidden; 
+    -webkit-backface-visibility: hidden;
     height: 100%;
     backface-visibility: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%; /* Circular */
-    overflow: visible; /* Ocultar contenido fuera del círculo */
+    border-radius: 10px; /* Circular si es necesario */
+    overflow: hidden;
 }
 
 .flip-card-front img, .flip-card-back img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 100%; /* Circular */
+    border-radius: 10px; /* Ajuste para las tarjetas circulares */
 }
 
 .flip-card-back {
@@ -662,15 +662,16 @@ img.fluid {
     width: 90%; /* Ajuste del ancho del contenido */
 }
 
+.team-name {
+    font-weight: bold;
+}
+
 .linkedin-icon {
     font-size: 30px;
-    color: #ffffff;
+    color: #0077b5; /* Color de LinkedIn */
     text-decoration: none;
     margin-top: 10px;
 }
-
-
-
 
 
 
