@@ -456,10 +456,13 @@ img.fluid {
 
 .video-responsive-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
     height: 0;
     overflow: hidden;
     max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .video-responsive-container iframe {
@@ -473,52 +476,46 @@ img.fluid {
 
 
 
-/*Recuperando las tarjetas*/
+/* Estilos generales para el contenedor de la sección | Tarjetas*/
 
-/* Estilos para la sección del equipo */
-.team-section {
-    background-color: #f9f9f9; /* Color de fondo de la sección */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.team-container {
-    background-color: #ffffff; /* Fondo blanco del contenedor de tarjetas */
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.team-section h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--color-primary-3);
-}
-
-.card-container {
+#team-section {
+    background-color: #f9f9f9; /* Color de fondo claro para la sección */
+    padding: 50px 20px; /* Espaciado alrededor de la sección */
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
 }
 
-.team-member {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background-color: white; /* Fondo blanco detrás de las tarjetas */
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+.container {
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    width: 90%;
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    text-align: center; /* Centrar el texto */
 }
 
-/* Flip card styles */
+h2 {
+    margin-bottom: 40px; /* Espacio debajo del título */
+}
+
+/* Contenedor de las tarjetas */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre tarjetas */
+}
+
+/* Estilos de las tarjetas */
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Ancho máximo de las tarjetas */
+    height: 300px; /* Alto fijo para las tarjetas */
+    perspective: 1000px; /* Profundidad de perspectiva */
+}
+
 .flip-card {
-    background-color: transparent;
-    perspective: 1000px;
     width: 100%;
     height: 100%;
 }
@@ -527,11 +524,11 @@ img.fluid {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    transition: transform 0.6s;
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -540,75 +537,69 @@ img.fluid {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 50%;
-    overflow: hidden;
+    border-radius: 50%; /* Bordes redondeados para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
 }
 
 .flip-card-front {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff; /* Fondo blanco */
 }
 
 .flip-card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .flip-card-back {
-    background-color: var(--color-primary-5); /* Color de fondo de la parte trasera */
+    background-color: #f1f1f1; /* Fondo claro para la parte de atrás */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-.back-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    padding: 20px;
+    position: relative;
 }
 
 .armadillo-img {
-    background-color: var(--color-primary-4); /* Color del círculo del armadillo */
+    position: absolute;
+    top: 10px;
+    background-color: #fff; /* Fondo blanco para el armadillo */
     border-radius: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
+    width: 80px; /* Tamaño del armadillo */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 .armadillo-img img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
+    width: 60%;
+    height: auto;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+    margin-top: 100px; /* Espacio debajo del armadillo */
 }
 
-.info .name {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.info .position {
-    font-size: 0.875rem;
+.name, .position {
     margin: 5px 0;
 }
 
-.info .linkedin-icon {
-    color: white;
-    font-size: 1.25rem;
+.linkedin-icon {
+    font-size: 24px;
+    color: #0077b5; /* Color de LinkedIn */
 }
 
+.card-container {
+    grid-template-rows: repeat(2, auto); /* Dos filas: una arriba, una abajo */
+}
 
 
 
