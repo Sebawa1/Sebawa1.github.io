@@ -475,37 +475,39 @@ img.fluid {
 
 /* Animación de las tarjetas */
 
-#about_t {
-    background: var(--color-primary-1);
-    opacity: 0.9;
-    padding: 40px 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#about_t h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
-    color: #333;
-}
-
-/* Contenedor de las tarjetas */
+/* Estilo para el contenedor del equipo */
 .card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-primary-4); /* Color de fondo para el contenedor */
 }
 
-/* Estilos generales para cada miembro del equipo */
+.card-container h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--color-primary-3);
+}
+
+/* Contenedor con fondo blanco y sombra */
 .team-member {
     position: relative;
-    width: 300px; /* Ajusta el ancho de las tarjetas */
-    height: 400px; /* Ajusta la altura de las tarjetas */
+    width: 200px;
+    height: 200px;
+    background-color: white; /* Fondo blanco para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    overflow: hidden; /* Evita que el contenido se desborde */
 }
 
-/* Estilos para el contenedor de la tarjeta con flip */
+/* Estilo para las filas de miembros del equipo */
+.team-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo para la tarjeta de voltear */
 .flip-card {
     background-color: transparent;
     perspective: 1000px;
@@ -513,7 +515,7 @@ img.fluid {
     height: 100%;
 }
 
-/* Contenedor interior de la tarjeta con efecto flip */
+/* Estilo para el contenido interior de la tarjeta */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -522,23 +524,23 @@ img.fluid {
     transform-style: preserve-3d;
 }
 
-/* Efecto de rotación al pasar el cursor */
+/* Estilo para el efecto de voltear la tarjeta */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* Estilos para el lado frontal de la tarjeta */
+/* Estilo para el frente y la parte trasera de la tarjeta */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 15px; /* Cambia el radio para bordes más redondeados */
+    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
 }
 
-/* Estilos específicos para el lado frontal */
+/* Estilo para la parte frontal de la tarjeta */
 .flip-card-front {
     background-color: var(--color-primary-4);
     display: flex;
@@ -546,14 +548,13 @@ img.fluid {
     justify-content: center;
 }
 
-/* Ajusta el tamaño de la imagen en el lado frontal */
 .flip-card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Estilos específicos para el lado trasero */
+/* Estilo para la parte trasera de la tarjeta */
 .flip-card-back {
     background-color: var(--color-primary-5);
     transform: rotateY(180deg);
@@ -565,7 +566,6 @@ img.fluid {
     position: relative;
 }
 
-/* Contenido de la parte trasera */
 .flip-card-back .info {
     background-color: white;
     border-radius: 15px;
@@ -574,7 +574,6 @@ img.fluid {
     width: 100%;
 }
 
-/* Imagen del armadillo en la parte trasera */
 .flip-card-back .armadillo-img {
     position: absolute;
     top: -30px;
@@ -589,13 +588,11 @@ img.fluid {
     justify-content: center;
 }
 
-/* Ajusta la imagen del armadillo */
 .flip-card-back .armadillo-img img {
     width: 100%;
     border-radius: 50%;
 }
 
-/* Estilo para el nombre y el cargo en la parte trasera */
 .flip-card-back .details .name {
     font-size: 1.2rem;
     font-weight: bold;
@@ -607,17 +604,12 @@ img.fluid {
     color: var(--color-primary-3);
 }
 
-/* Estilo para el ícono de LinkedIn */
 .linkedin-icon {
     font-size: 1.5rem;
     color: #0077b5;
     text-decoration: none;
     margin-top: 10px;
 }
-
-
-
-
 
 
 
