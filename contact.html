@@ -77,7 +77,7 @@
         <section class="row">
             <div class="col-md-6">
                 <h2>Contáctanos</h2>
-                <form id="contactForm" action="https://armadillobot.armadilloappcl.repl.co/contact" method="POST">
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required>
@@ -101,6 +101,31 @@
             </div>
         </section>
     </div>
+    
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío estándar del formulario
+    
+            const formData = new FormData(this);
+            fetch('https://armadillobot.armadilloappcl.repl.co/contact', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text(); // Lee la respuesta del servidor
+                } else {
+                    throw new Error('Error en el envío del mensaje.');
+                }
+            })
+            .then(text => {
+                alert('Mensaje enviado correctamente!');
+            })
+            .catch(error => {
+                alert('No se pudo enviar el mensaje: ' + error.message);
+            });
+        });
+    </script>
     
 
     <footer class="template-footer bg-blue footer-white-color">
