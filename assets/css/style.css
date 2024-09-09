@@ -184,7 +184,7 @@ header .navbar-nav .nav-link {
     height: 100%;
     text-align: center;
     transition: transform 0.8s ease-in-out, margin-left 0.2s;
-    -webkit-transform-style : preserve-3d;
+    transform-style : preserve-3d;
     will-change: transform;
 }
 
