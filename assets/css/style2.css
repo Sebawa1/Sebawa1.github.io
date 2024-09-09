@@ -494,12 +494,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 
 .instagram-media {
-    max-width: 1000px; /* Ajusta el tamaño máximo del Instagram */
-    width: 100%; /* Hace que el bloque use todo el ancho disponible */
+    max-width: 1000px; 
+    width: 100%; 
 }
 
 .common-heading {
-    margin-bottom: 50px; /* Espacio adicional debajo del título si es necesario */
+    margin-bottom: 50px; 
 }
 
 
@@ -507,6 +507,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     border-radius: 10px;
     min-height: 260px;
     height: 100%;
+    position: relative; 
+    overflow: hidden; 
   }
   
   
@@ -536,7 +538,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   }
 
 
-  #rrss .card-social  {
+#rrss .card-social  {
     justify-content: center;
     text-align: center;
 }
@@ -562,12 +564,18 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: white;
     font-size: 60px;
 }
-#rrss .card-social   .card-footer{
-    background-color: transparent;
-    color:rgba(0, 0, 0, .7);
-    border-top:none;
-    padding: 10px 20px 20px 20px;
+
+#rrss .card-social .card-footer {
+    background-color: #191919; 
+    color: rgba(255, 255, 255, 0.7); 
+    border-top: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; 
 }
+
 #rrss .card-social   .card-body .img-social  {
     background-position: center;
     background-size: cover;
