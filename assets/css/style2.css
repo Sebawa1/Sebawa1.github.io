@@ -228,40 +228,38 @@ img.fluid {
 
 .carousel-container {
     position: relative;
-    max-width: 800px;
-    margin: auto;
     overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Ajustar el ancho máximo del carrusel */
+    margin: auto;
 }
 
 .carousel-slide {
     display: flex;
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Efecto de libro */
+    width: 100%;
 }
 
 .carousel-item {
-    flex: 0 0 100%;
+    min-width: 100%;
     box-sizing: border-box;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
 }
 
 .carousel-text {
-    background-color: var(--color-primary-2);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
+    background-color: var(--color-primary-4);
+    color: var(--color-primary-5);
+    padding: 2rem;
+    text-align: justify;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-/* Botones de Navegación */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .carousel-nav {
     position: absolute;
     top: 50%;
@@ -274,135 +272,20 @@ img.fluid {
 .carousel-nav button {
     background-color: var(--color-primary-2);
     border: none;
-    color: var(--color-primary-5);
-    font-size: 1.5rem;
-    padding: 10px;
+    color: white;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
 }
 
 .carousel-nav button:hover {
     background-color: var(--color-primary-3);
 }
 
-/* Animación de Libro */
-@keyframes flip {
-    0% {
-        transform: rotateY(0);
-    }
-    50% {
-        transform: rotateY(-180deg);
-    }
-    100% {
-        transform: rotateY(-360deg);
-    }
-}
-
-.carousel-slide.flipping {
-    animation: flip 1s forwards;
-}
-
-/* Estilos de enlaces */
-.link {
-    color: var(--color-primary-3);
-    text-decoration: none;
-    font-weight: bold;
+.extra-lines {
     font-size: 1.1rem;
-}
-
-.link:hover {
-    text-decoration: underline;
-    color: var(--color-primary-2);
-}
-
-
-
-/* Sección de información importante de los estudios */
-.info-wrapper {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
-    gap: 20px;
-}
-
-.info-box {
-    background-color: var(--color-primary-2);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 45%;
-}
-
-.info-box h4 {
-    margin-bottom: 1rem;
-    color: var(--color-primary-3);
-}
-
-.info-box p {
-    margin: 0;
-    color: var(--color-primary-3);
-}
-
-/* Sección de problema y solución */
-.problem-solution {
-    padding: 2rem;
-}
-
-.problem-solution h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--color-primary-3);
-}
-
-.problem-solution .row {
-    display: flex;
-    gap: 20px;
-}
-
-.problem-solution .col-md-6 {
-    background-color: var(--color-primary-2);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.problem-solution .col-md-6 h4 {
-    color: var(--color-primary-3);
-}
-
-.problem-solution .col-md-6 p {
-    color: var(--color-primary-3);
-}
-
-/* Sección de invitación a la feria */
-.invitation {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--color-primary);
-    color: var(--color-primary-4);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.invitation h3 {
-    margin-bottom: 1rem;
-}
-
-.invitation a {
-    color: var(--color-primary-4);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.invitation a:hover {
-    text-decoration: underline;
-}
-
-.invitation p {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
+    margin-top: 1rem;
 }
 
 

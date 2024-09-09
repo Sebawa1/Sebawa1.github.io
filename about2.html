@@ -118,33 +118,33 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const slide = document.querySelector('.carousel-slide');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
-            const totalItems = document.querySelectorAll('.carousel-item').length;
-            let currentIndex = 0;
+    const slide = document.querySelector('.carousel-slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    const totalItems = document.querySelectorAll('.carousel-item').length;
+    let currentIndex = 0;
 
-            function updateCarousel() {
-                const offset = -100 * currentIndex;
-                slide.style.transform = `translateX(${offset}%)`;
-                slide.classList.add('flipping');
-                setTimeout(() => slide.classList.remove('flipping'), 800);
-            }
+    function updateCarousel() {
+        const offset = -100 * currentIndex;
+        slide.style.transform = `translateX(${offset}%)`;
+        slide.classList.add('flipping');
+        setTimeout(() => slide.classList.remove('flipping'), 800);
+    }
 
-            prevButton.addEventListener('click', function() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
-                updateCarousel();
-            });
+    prevButton.addEventListener('click', function() {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+        updateCarousel();
+    });
 
-            nextButton.addEventListener('click', function() {
-                currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
+    nextButton.addEventListener('click', function() {
+        currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
 
-            updateCarousel();
-        });
+    updateCarousel();
+});
+
     </script>
-
 
 
     <!-- Footer -->
