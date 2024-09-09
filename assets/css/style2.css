@@ -5,6 +5,7 @@
     --color-primary-3: #1c4789;
     --color-primary-4: #fffde1;
     --color-primary-5: #94481c;
+    --color-primary-6: #fcd34d;
 }
 
 /* Estilos generales */
@@ -40,15 +41,24 @@ img.fluid {
 
 /* Estilos generales para la navbar */
 .navbar {
-    background-color: #ffffff; /* Color de fondo de la barra de navegación */
+    background-color: var(--color-primary-6); /* Color de fondo de la barra de navegación */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
-    padding: 0 1.5rem; /* Espaciado horizontal */
+    padding: 0 1.5rem; 
+    /*escribir aqui espaciado vertical del navbar*/
+    /* Espaciado interno de la barra de navegación */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+    
 }
 
 .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #343a40;
+    color: var(--color-primary-3);
     text-transform: uppercase;
 }
 
@@ -135,6 +145,66 @@ img.fluid {
     }
 }
 
+/* ABout 1*/
+
+#about .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about .section-background {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about .section-background:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#about .section-background h2 {
+    margin-top: 0;
+}
+
+#about .section-background p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#about .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#about .img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de Enlaces */
+#about .link {
+    color: var(--color-primary-3);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#about .link:hover {
+    text-decoration: underline;
+    color: var(--color-primary-2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #about .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
 
 
 
