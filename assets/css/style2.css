@@ -139,6 +139,73 @@ img.fluid {
     }
 }
 
+/*Hero y Video*/
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: var(--color-primary-2);
+}
+
+.hero-text {
+    max-width: 50%;
+    color: var(--color-primary-5);
+    display: flex;
+    align-items: center;
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.hero-area-v2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #fcd34d;
+    overflow: hidden; /* Asegura que los elementos no se desborden */
+}
+
+/* Ajuste para el texto del héroe */
+.hero-title {
+    font-size: 3vw; /* Tamaño de fuente dinámico */
+    text-align: center; /* Alinea el texto al centro */
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    font-size: 1.5vw;
+    text-align: center; /* Alinea el texto al centro */
+    margin: 0 auto;
+}
+
+/* Ajuste para la imagen del héroe */
+.hero-image img {
+    max-width: 100%; /* Ajusta la imagen al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Ajuste para el contenedor del video */
+.video-responsive-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin: auto; /* Centra el contenedor */
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
 /* ABout 1*/
 
 #about .section-title {
@@ -194,35 +261,8 @@ img.fluid {
     color: var(--color-primary-2);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    #about .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
 
 
-
-
-
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    background-color: var(--color-primary-2);
-}
-
-.hero-text {
-    max-width: 50%;
-    color: var(--color-primary-5);
-}
-
-.hero img {
-    max-width: 45%;
-}
 
 /* Estilos de carrusel */
 
@@ -298,107 +338,52 @@ img.fluid {
 
 
 
-/* Hero Section */
-
-.hero-area-v2 {
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #fcd34d;
-}
-
-/* Ensure text wraps properly */
-.hero-title {
-    font-size: 3vw; /* Dynamic font size */
-    margin: 0 auto;
-}
-
-.hero-subtitle {
-    font-size: 1.5vw;
-    margin: 0 auto;
-}
-
-.hero {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 2rem;
-    background-color: var(--color-primary-2);
-}
-
-.hero-text {
-    max-width: 50%;
-    color: var(--color-primary-5);
-    display: flex;
-    align-items: center;
-}
-
-.hero-video {
-    max-width: 45%;
-}
-
-
-.video-responsive-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.video-responsive-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-
 /* Estilos generales para el contenedor de la sección | Tarjetas*/
 
-#team-section {
-    background-color: #f9f9f9; /* Color de fondo claro para la sección */
-    padding: 50px 20px; /* Espaciado alrededor de la sección */
+/* Estilos para la sección del equipo */
+.team-section {
+    background-color: #f9f9f9; /* Color de fondo de la sección */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.team-container {
+    background-color: #ffffff; /* Fondo blanco del contenedor de tarjetas */
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary-3);
+}
+
+.card-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
 }
 
-.container {
-    background-color: #fff; /* Fondo blanco para el contenedor */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 20px;
-    width: 90%;
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    text-align: center; /* Centrar el texto */
-}
-
-h2 {
-    margin-bottom: 40px; /* Espacio debajo del título */
-}
-
-/* Contenedor de las tarjetas */
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px; /* Espacio entre tarjetas */
-}
-
-/* Estilos de las tarjetas */
-.card {
+.team-member {
     position: relative;
-    width: 100%;
-    max-width: 300px; /* Ancho máximo de las tarjetas */
-    height: 300px; /* Alto fijo para las tarjetas */
-    perspective: 1000px; /* Profundidad de perspectiva */
+    width: 200px;
+    height: 200px;
+    background-color: white; /* Fondo blanco detrás de las tarjetas */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
+/* Flip card styles */
 .flip-card {
+    background-color: transparent;
+    perspective: 1000px;
     width: 100%;
     height: 100%;
 }
@@ -407,11 +392,11 @@ h2 {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
-.card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -420,69 +405,75 @@ h2 {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 50%; /* Bordes redondeados para las tarjetas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .flip-card-front {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff; /* Fondo blanco */
 }
 
 .flip-card-front img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
 }
 
 .flip-card-back {
-    background-color: #f1f1f1; /* Fondo claro para la parte de atrás */
+    background-color: var(--color-primary-5); /* Color de fondo de la parte trasera */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    position: relative;
+    padding: 10px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .armadillo-img {
-    position: absolute;
-    top: 10px;
-    background-color: #fff; /* Fondo blanco para el armadillo */
+    background-color: var(--color-primary-4); /* Color del círculo del armadillo */
     border-radius: 50%;
-    width: 80px; /* Tamaño del armadillo */
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .armadillo-img img {
-    width: 60%;
-    height: auto;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
 }
 
 .info {
-    margin-top: 100px; /* Espacio debajo del armadillo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
 }
 
-.name, .position {
+.info .name {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.info .position {
+    font-size: 0.875rem;
     margin: 5px 0;
 }
 
-.linkedin-icon {
-    font-size: 24px;
-    color: #0077b5; /* Color de LinkedIn */
+.info .linkedin-icon {
+    color: white;
+    font-size: 1.25rem;
 }
 
-.card-container {
-    grid-template-rows: repeat(2, auto); /* Dos filas: una arriba, una abajo */
-}
 
 
 
@@ -627,6 +618,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .instagram-media {
     margin-top: 20px;
+    max-width: 100%; /* Asegura que no se desborde del contenedor */
+    display: flex; /* Centra el bloque de Instagram */
+    justify-content: center;
 }
 
 .instagram-media img {
@@ -783,13 +777,31 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 
-/* Responsivo */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
         text-align: center;
     }
+
+    .hero-title {
+        font-size: 4vw; /* Ajuste para pantallas pequeñas */
+    }
+
+    .hero-subtitle {
+        font-size: 2vw;
+    }
+
     .hero-text, .hero-video {
+        max-width: 100%;
+    }
+
+    .video-responsive-container {
+        padding-bottom: 75%; /* Ajuste para pantallas pequeñas */
+    }
+
+    #about .col-md-6 {
+        flex: 0 0 100%;
         max-width: 100%;
     }
 }
@@ -798,7 +810,9 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     nav ul {
         flex-direction: column;
     }
+
     .card, .circular-card {
         width: 100%;
     }
 }
+
