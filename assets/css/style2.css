@@ -184,26 +184,7 @@ img.fluid {
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
-/* Ajuste para el contenedor del video */
-.video-responsive-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    margin: auto; /* Centra el contenedor */
-}
 
-.video-responsive-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 
 /* ABout 1*/
@@ -266,6 +247,59 @@ img.fluid {
 
 /* Estilos de carrusel */
 
+#armadillo .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#armadillo .section-background {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#armadillo .section-background:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#armadillo .section-background h2 {
+    margin-top: 0;
+}
+
+#armadillo .section-background p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#armadillo .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#armadillo .img-fluid:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos de Enlaces */
+#armadillo .link {
+    color: var(--color-primary-3);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#armadillo .link:hover {
+    text-decoration: underline;
+    color: var(--color-primary-2);
+}
+
 
 .extra-lines {
     font-size: 1.1rem;
@@ -296,7 +330,7 @@ img.fluid {
 }
 
 .team-container {
-    background-color: #ffffff; /* Fondo blanco del contenedor de tarjetas */
+    background-color: var(--color-primary-6); /* Fondo blanco del contenedor de tarjetas */
     border-radius: 20px;
     padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -319,9 +353,9 @@ img.fluid {
 /* Estilos de las tarjetas */
 .team-member {
     position: relative;
-    width: 200px;
-    height: 200px;
-    background-color: white; /* Fondo blanco detrás de las tarjetas */
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-primary-3); /* Fondo blanco detrás de las tarjetas */
     border-radius: 15px; /* Bordes redondeados */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -390,7 +424,7 @@ img.fluid {
     background-color: var(--color-primary-4); /* Color del círculo del armadillo */
     border-radius: 50%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .armadillo-img img {
@@ -514,6 +548,11 @@ img.fluid {
     margin-top: 1rem;
 }
 
+.link-underline {
+    color: #ff0000; 
+}
+
+
 /* Ajustes de la animación */
 @keyframes fadeIn {
     from {
@@ -560,6 +599,178 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 
 
+.common-heading {
+    margin-bottom: 50px; 
+}
+
+
+/* General Styles */
+.card {
+    border-radius: 10px;
+    min-height: 260px;
+    height: 100%;
+    overflow: hidden; 
+}
+
+.card .card-bg-black {
+    background-color: #191919;
+    color: white;
+}
+
+.card .card-title-white {
+    border-left: 3px solid #e5b300;
+    color: white;
+    padding-left: 1em!important;
+}
+
+.card .card-text-white {
+    color: white;
+}
+
+.card .card-title-black {
+    border-left: 3px solid #e5b300;
+    color: #3b424c;
+    padding-left: 1em;
+}
+
+.card .card-text-black {
+    color: #3b424c;
+}
+
+#rrss .card-social {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén en una columna */
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Ocupa toda la altura disponible */
+}
+
+#rrss .card-social .card-body {
+    display: block; /* Asegura que el contenido del body se muestre */
+    padding: 15px; /* Ajusta el padding según sea necesario */
+}
+
+#rrss .card-social .social-link {
+    opacity: .8;
+    transition: all .2s ease-in-out;
+}
+
+#rrss .card-social .social-link:hover {
+    opacity: 1;
+}
+
+#rrss .card-social .social-link:hover.effect-hover {
+    margin-left: 1em;
+}
+
+#rrss .card-social .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 20px 20px 10px 20px;
+}
+
+#rrss .card-social .card-header .logo-social i {
+    color: white;
+    font-size: 60px;
+}
+
+#rrss .card-social .card-footer {
+    background-color: #191919; 
+    color: rgb(0, 0, 0); 
+    border-top: none;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; 
+}
+
+#rrss .card-social .card-body .img-social {
+    background-position: center;
+    background-size: cover;
+    height: 180px;
+    width: 100%;
+}
+
+#rrss .card-facebook {
+    background-color: #3B5998;
+}
+
+#rrss .card-instagram {
+    background-color: #990099;
+}
+
+#rrss .card-twitter {
+    background-color: #0EADD8;
+}
+
+#rrss .card-youtube {
+    background-color: #ff0000;
+}
+
+#rrss .card-linkedin {
+    background-color: #0E76A8;
+}
+
+#rrss .card-tiktok {
+    background-color: #000000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 4vw; /* Ajuste para pantallas pequeñas */
+    }
+
+    .hero-subtitle {
+        font-size: 2vw;
+    }
+
+    .hero-text, .hero-video {
+        max-width: 100%;
+    }
+
+    .video-responsive-container {
+        padding-bottom: 75%; /* Ajuste para pantallas pequeñas */
+    }
+
+    #about .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    #rrss .row {
+        flex-direction: column; /* Asegura que los elementos estén en columna en pantallas pequeñas */
+    }
+
+    #rrss .card-social {
+        margin-bottom: 15px; /* Añade margen inferior para espaciado entre tarjetas */
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .card, .circular-card {
+        width: 100%;
+    }
+
+    .video-responsive-container {
+        padding-bottom: 75%; /* Ajuste para pantallas muy pequeñas */
+    }
+
+    #rrss .card-social {
+        margin-bottom: 15px; /* Añade margen inferior para espaciado entre tarjetas */
+    }
+}
+
 .instagram-media {
     margin-top: 20px;
     max-width: 100%; /* Asegura que no se desborde del contenedor */
@@ -571,40 +782,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     width: 100%; /* Ajusta el tamaño de la imagen de Instagram */
 }
 
-
-.common-heading {
-    margin-bottom: 50px; 
-}
-
-
-#rrss {
-    padding: 40px 0;
-}
-
-.title-section {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
-}
-
 .video-responsive-container {
     position: relative;
-    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
     height: 0;
     overflow: hidden;
     max-width: 100%;
     background: #000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    margin-right: 20px; /* Espacio entre el video y el Instagram */
+    margin: auto; /* Centra el contenedor */
 }
 
 .video-responsive-container iframe {
@@ -613,89 +800,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.instagram-media {
-    width: 100%;
-    max-width: 500px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-@media (min-width: 768px) {
-    .video-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-.card {
-    border-radius: 10px;
-    min-height: 260px;
-    height: 100%;
-    overflow: hidden;
-}
-
-.card-social {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    background-color: #fff; /* Fondo blanco para las tarjetas */
-}
-
-.card-social .card-body {
-    padding: 15px;
-}
-
-.card-social .social-link {
-    opacity: .8;
-    transition: all .2s ease-in-out;
-}
-
-.card-social .social-link:hover {
-    opacity: 1;
-}
-
-.card-social .card-header {
-    background-color: transparent;
-    border-bottom: none;
-    padding: 20px 20px 10px 20px;
-}
-
-.card-social .logo-social {
-    margin-bottom: 10px;
-}
-
-.card-social .logo-social img {
-    max-width: 60px;
-    height: auto;
-}
-
-.card-facebook { background-color: #3B5998; }
-.card-instagram { background-color: #990099; }
-.card-twitter { background-color: #0EADD8; }
-.card-youtube { background-color: #ff0000; }
-.card-linkedin { background-color: #0E76A8; }
-.card-tiktok { background-color: #000000; }
-
-@media (max-width: 767px) {
-    .video-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .video-responsive-container {
-        margin-right: 0; /* Eliminar margen en pantallas pequeñas */
-        margin-bottom: 20px;
-    }
-
-    .instagram-media {
-        width: 100%;
-    }
 }
 
 
@@ -735,43 +839,4 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     border-bottom: 1px solid rgba(22, 28, 45, .1);
 }
 
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 4vw; /* Ajuste para pantallas pequeñas */
-    }
-
-    .hero-subtitle {
-        font-size: 2vw;
-    }
-
-    .hero-text, .hero-video {
-        max-width: 100%;
-    }
-
-    .video-responsive-container {
-        padding-bottom: 75%; /* Ajuste para pantallas pequeñas */
-    }
-
-    #about .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    .card, .circular-card {
-        width: 100%;
-    }
-}
 

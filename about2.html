@@ -33,85 +33,6 @@
     <meta name="author" content="ARmadillo"> 
     
     <title>ARmadillo - Sobre ARmadillo</title>
-    <style>
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 15px;
-            border: 2px solid #ddd;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .carousel-item {
-            display: flex;
-            width: 100%;
-            flex-shrink: 0;
-        }
-
-        .carousel-text {
-            flex: 1;
-            padding: 20px;
-        }
-
-        .carousel-image {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .carousel-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .carousel-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-
-        .carousel-nav button {
-            background-color: rgba(0,0,0,0.5);
-            border: none;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .carousel-nav button:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .section-content {
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-    </style>
-    
 </head>
 
 <body>
@@ -145,84 +66,45 @@
     </header>
     
 
-    <div class="container my-5">
+    <div class="container my-5" id="armadillo">
         <section class="row align-items-center mb-5">
-            <div class="col-md-12 text-center mb-4">
+            <div class="col-md-6 section-background animate__animated animate__fadeInUp">
                 <h2 class="section-title">¿Por qué ARmadillo?</h2>
+                <p style="text-align: justify;">
+                    Cuenta la leyenda que en un lejano pueblo rodeado de niños vivía un ARmadillo conocido como “el pequeño con armadura”. Este era muy especial, pues su armadura estaba hecha de un gran libro mágico. Cada vez que un niño abría el libro, las palabras saltaban de sus páginas y se convertían en historias, aventuras y lecciones que ayudaban a los pequeños a entender el mundo que los rodeaba. 🦔
+                </p>
+                <p style="text-align: justify;">
+                    Así, "el pequeño con armadura" se convirtió en el mejor amigo de los niños, protegiéndolos con la fuerza de la educación y ayudándolos a descubrir el maravilloso poder de la lectura. 📖
+                </p>
+                <p class="extra-lines">Los estaremos esperando el 15 de Noviembre en la XXXII Feria de Software. 🥳😁</p>
             </div>
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <div class="carousel-item">
-                        <div class="carousel-text">
-                            <p style="text-align: justify; font-size: 1.1rem; line-height: 1.6;">
-                                Cuenta la leyenda que en un lejano pueblo rodeado de niños vivía un ARmadillo conocido como “el pequeño con armadura”. Este era muy especial, pues su armadura estaba hecha de un gran libro mágico. Cada vez que un niño abría el libro, las palabras saltaban de sus páginas y se convertían en historias, aventuras y lecciones que ayudaban a los pequeños a entender el mundo que los rodeaba. 🦔
-                            </p>
-                            <p style="text-align: justify; font-size: 1.1rem; line-height: 1.6;">
-                                Así, "el pequeño con armadura" se convirtió en el mejor amigo de los niños, protegiéndolos con la fuerza de la educación y ayudándolos a descubrir el maravilloso poder de la lectura. 📖
-                            </p>
-                            <p class="extra-lines">Los estaremos esperando el 15 de Noviembre en la XXXII Feria de Software. 🥳😁</p>
-                        </div>
-                        <div class="carousel-image">
-                            <img src="https://via.placeholder.com/300" alt="ARmadillo">
-                        </div>
-                    </div>
-                    <!-- Puedes agregar más items aquí -->
-                </div>
-                <div class="carousel-nav">
-                    <button class="prev">&lt;</button>
-                    <button class="next">&gt;</button>
-                </div>
+            <div class="col-md-6 text-center animate__animated animate__fadeInUp">
+                <img src="./assets/images/feliz.png" alt="ARmadillo" class="img-fluid">
             </div>
         </section>
-        
-        <section class="text-center">
-            <h3 class="section-title">¡Placeholder!</h3>
+    
+        <section class="row mb-5">
+            <div class="col-md-6 section-background animate__animated animate__fadeInUp">
+                <h2 class="section-title">Problema</h2>
+                <p style="text-align: justify;">
+                    En Chile, la comprensión lectora en los niños de primero y segundo básico enfrenta desafíos significativos. Estas deficiencias pueden tener repercusiones a largo plazo en el desarrollo educativo y personal de los niños.
+                </p>
+            </div>
+            <div class="col-md-6 section-background animate__animated animate__fadeInUp">
+                <h2 class="section-title">Solución</h2>
+                <p style="text-align: justify;">
+                    ARmadillo ofrece un aprendizaje interactivo con Realidad Aumentada. Con métodos de enseñanza modernos para trabajar la comprensión lectora y un gestor web de contenidos y aplicación móvil con material, buscamos mejorar la comprensión lectora de manera eficaz.
+                </p>
+            </div>
+        </section>
+    
+        <section class="text-center mb-5">
+            <h3 class="section-title">Más Información</h3>
             <a href="https://gobierno.uc.cl/noticias/el-60-de-estudiantes-de-segundo-basico-estan-bajo-los-niveles-de-comprension-lectora-esperados-para-su-edad/" target="_blank" rel="noopener noreferrer" class="link">Más información sobre comprensión lectora</a><br>
             <a href="https://www.uandes.cl/noticias/96-de-los-estudiantes-de-1ero-basico-no-conocen-las-letras-del-alfabeto/" target="_blank" rel="noopener noreferrer" class="link">Estudio sobre alfabetización</a>
         </section>
-        <section class="mt-5">
-            <div class="col-md-12 text-center">
-                <h2 class="section-title">¿Por qué ARmadillo?</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4 class="section-title">Problema:</h4>
-                    <p class="section-content">En Chile, la comprensión lectora en los niños de primero y segundo básico enfrenta desafíos significativos. Estas deficiencias pueden tener repercusiones a largo plazo en el desarrollo educativo y personal de los niños.</p>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="section-title">Solución:</h4>
-                    <p class="section-content">ARmadillo ofrece un aprendizaje interactivo con Realidad Aumentada. Con métodos de enseñanza modernos para trabajar la comprensión lectora y un gestor web de contenidos y aplicación móvil con material, buscamos mejorar la comprensión lectora de manera eficaz.</p>
-                </div>
-            </div>
-        </section>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const slide = document.querySelector('.carousel-slide');
-            const prevButton = document.querySelector('.prev');
-            const nextButton = document.querySelector('.next');
-            const totalItems = document.querySelectorAll('.carousel-item').length;
-            let currentIndex = 0;
-
-            function updateCarousel() {
-                const offset = -100 * currentIndex;
-                slide.style.transform = `translateX(${offset}%)`;
-            }
-
-            prevButton.addEventListener('click', function() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
-                updateCarousel();
-            });
-
-            nextButton.addEventListener('click', function() {
-                currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
-
-            updateCarousel();
-        });
-    </script>
+    
     
     <!-- Footer -->
     <footer class="template-footer bg-blue footer-white-color">
