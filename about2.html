@@ -94,7 +94,6 @@
             </div>
         </section>
         
-
         <section class="text-center">
             <h3 class="section-title">¡Placeholder!</h3>
             <a href="https://gobierno.uc.cl/noticias/el-60-de-estudiantes-de-segundo-basico-estan-bajo-los-niveles-de-comprension-lectora-esperados-para-su-edad/" target="_blank" rel="noopener noreferrer" class="link">Más información sobre comprensión lectora</a><br>
@@ -115,8 +114,38 @@
                 </div>
             </div>
         </section>
-
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slide = document.querySelector('.carousel-slide');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            const totalItems = document.querySelectorAll('.carousel-item').length;
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                const offset = -100 * currentIndex;
+                slide.style.transform = `translateX(${offset}%)`;
+                slide.classList.add('flipping');
+                setTimeout(() => slide.classList.remove('flipping'), 800);
+            }
+
+            prevButton.addEventListener('click', function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener('click', function() {
+                currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+
+            updateCarousel();
+        });
+    </script>
+
+
 
     <!-- Footer -->
     <footer class="template-footer bg-blue footer-white-color">

@@ -160,13 +160,8 @@ img.fluid {
 
 /* Estilos de carrusel */
 
-/* Carrusel Cuadrado */
 .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: relative;
-    width: 100%;
     max-width: 800px;
     margin: auto;
     overflow: hidden;
@@ -174,14 +169,16 @@ img.fluid {
 
 .carousel-slide {
     display: flex;
-    width: 200%;
     transition: transform 0.8s ease-in-out;
 }
 
 .carousel-item {
-    flex: 0 0 50%;
+    flex: 0 0 100%;
     box-sizing: border-box;
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-item img {
@@ -195,12 +192,7 @@ img.fluid {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-text p {
-    margin: 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
+    max-width: 100%;
 }
 
 /* Botones de Navegación */
@@ -245,6 +237,18 @@ img.fluid {
     animation: flip 1s forwards;
 }
 
+/* Estilos de enlaces */
+.link {
+    color: var(--color-primary-3);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: var(--color-primary-2);
+}
 
 
 
