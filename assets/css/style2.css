@@ -34,39 +34,111 @@ img.fluid {
     height: auto;
 }
 
-.header, .footer {
-    background: var(--color-primary-2);
-    color: var(--color-primary-4);
+
+
+/* Navbar */
+
+/* Estilos generales para la navbar */
+.navbar {
+    background-color: #ffffff; /* Color de fondo de la barra de navegación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
+    padding: 0 1.5rem; /* Espaciado horizontal */
 }
 
-.header {
-    padding: 20px 0;
-}
-
-.header .navbar {
-    justify-content: center;
-}
-
-.header .navbar-brand img {
-    max-height: 60px;
-}
-
-.header .navbar-nav .nav-link {
-    color: var(--color-primary-3) !important;
+.navbar-brand {
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-right: 15px;
+    color: #343a40;
+    text-transform: uppercase;
 }
 
-.footer {
-    padding: 10px 0;
-    text-align: center;
+.navbar-toggler {
+    border: none;
+    background: none;
+    outline: none;
+    transition: transform 0.3s ease;
 }
 
-/* Normalización de estilos */
-header .navbar-nav .nav-link:hover {
-    color: var(--color-primary-2);
-    transform: translateY(-5px);
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Icono de menú de hamburguesa, reemplaza con tu SVG */
+    background-repeat: no-repeat;
+    background-size: 1.25em 1.25em;
 }
+
+.navbar-toggler:hover {
+    transform: rotate(90deg); /* Rotación del ícono de menú al pasar el cursor */
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-link {
+    color: #343a40;
+    font-weight: 500;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: var(--color-primary-2); /* Color al pasar el cursor */
+    transform: translateY(-3px); /* Movimiento hacia arriba al hacer hover */
+}
+
+/* Estilos para el menú colapsable */
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+/* Animaciones */
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInLeft {
+    animation-name: fadeInLeft;
+}
+
+.animate__fadeInRight {
+    animation-name: fadeInRight;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
 
 /* Hero Section */
 .hero {
@@ -272,27 +344,6 @@ header .navbar-nav .nav-link:hover {
 
 
 
-/* Estilos para la navegación */
-nav {
-    background-color: var(--color-primary);
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav ul li {
-    margin: 0 1rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--color-primary-4);
-    font-weight: bold;
-}
 
 /* Hero Section */
 
@@ -354,43 +405,6 @@ nav ul li a {
     width: 100%;
     height: auto;
 }
-
-/* Animaciones para los bloques */
-.animate__animated {
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-.animate__fadeInLeft {
-    animation-name: fadeInLeft;
-}
-
-.animate__fadeInRight {
-    animation-name: fadeInRight;
-}
-
-@keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 
 
 /* Animación de las tarjetas */
@@ -581,32 +595,7 @@ nav ul li a {
     margin-top: 10px;
 }
 
-.navbar {
-    background-color: #f8f9fa; /* Color de fondo de la barra de navegación */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
-}
 
-.nav-link {
-    color: #343a40;
-    font-weight: bold;
-    padding: 10px 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--color-primary-2); /* Color al pasar el cursor */
-    transform: translateY(-5px); /* Movimiento hacia arriba al hacer hover */
-}
-
-.navbar-toggler {
-    border: none;
-    outline: none;
-    transition: transform 0.3s ease;
-}
-
-.navbar-toggler:hover {
-    transform: rotate(90deg); /* Rotación del ícono de menú al pasar el cursor */
-}
 
 
 
