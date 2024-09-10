@@ -107,7 +107,7 @@
             event.preventDefault(); // Evita el envío estándar del formulario
     
             const formData = new FormData(this);
-            fetch('https://armadillobot.armadilloappcl.repl.co/contact', {
+            fetch('https://armadillobot.armadilloappcl.repl.co/contact', { // Verifica esta URL
                 method: 'POST',
                 body: formData
             })
