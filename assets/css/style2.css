@@ -157,7 +157,16 @@ img.fluid {
 }
 
 /*Hero y Video*/
-
+.tagline {
+    font-size: 2rem;
+    color: var(--color-primary-2);
+    font-weight: bold;
+    background-color: var(--color-primary-4);
+    padding: 10px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
 /* Hero Section */
 .hero {
     display: flex;
@@ -212,18 +221,13 @@ img.fluid {
     height: auto; /* Mantiene la proporción de la imagen */
 }
 
-/* Estilos del contenedor combinado */
+/* Diseño en Flexbox para el video e Instagram */
 .combined-container {
-    border: 4px solid white; /* Borde blanco grande */
-    border-radius: 15px; /* Esquinas redondeadas del borde */
-    padding: 10px; /* Espaciado interno si se necesita */
-    box-sizing: border-box; /* Asegura que el borde se incluya en el tamaño del contenedor */
-    display: flex; /* Organiza los elementos dentro del contenedor */
-    gap: 20px; /* Espaciado entre los elementos, ajusta según lo necesario */
-    align-items: center; /* Centra verticalmente los elementos en la sección */
-    justify-content: center; /* Centra horizontalmente los elementos en la sección */
-    background-color: #000; /* Fondo negro para el contenedor si se quiere */
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay suficiente espacio */
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Estilos para el bloque de Instagram */
