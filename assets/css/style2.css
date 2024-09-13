@@ -1,28 +1,31 @@
 /* Variables de color */
 :root {
     --color-primary: #4494ff;
-    --color-primary-2: #e0d110;
+    --color-primary-2: #fcd34d;
     --color-primary-3: #1c4789;
     --color-primary-4: #fffde1;
     --color-primary-5: #94481c;
-    --color-primary-6: #fcd34d;
+    --font-cs-book: 'Poppins', sans-serif;    
+
 }
 
 /* Estilos generales */
 body {
     background-color: var(--color-primary-4);
-    font-family: Arial, sans-serif;
+    font-family: var(--font-cs-book);
     color: var(--color-primary-3);
     font-weight: 400;
     font-size: 17px;
     line-height: 1.8;
     overflow-x: hidden !important;
+    
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 img {
@@ -41,13 +44,12 @@ img.fluid {
 
 /* Estilos generales para la navbar */
 .navbar {
-    background-color: var(--color-primary-6); /* Color de fondo de la barra de navegación */
+    background-color: var(--color-primary-3); /* Color de fondo de la barra de navegación */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la barra */
     padding: 1rem 3rem; /* Espaciado interno ajustado */
     width: 100%; 
     max-width: none; /* Quita cualquier restricción de ancho máximo */
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
-    border-radius: 10px; /* Esquinas redondeadas del contenedor */
+    /*border-radius: 10px; /* Esquinas redondeadas del contenedor */
     overflow: hidden; /* Asegura que el borde no sobresalga del contenedor */
 }
 
@@ -58,7 +60,7 @@ img.fluid {
     left: 0;
     right: 0;
     bottom: 0;
-    border: 5px solid white; /* Bordes blancos */
+    /*border: 5px solid white; /* Bordes blancos */
     border-radius: 10px; /* Esquinas redondeadas del borde */
     pointer-events: none; /* Asegura que el pseudo-elemento no interfiera con la interacción del usuario */
     box-sizing: border-box; /* Asegura que el borde se incluya en el tamaño del contenedor */
@@ -73,7 +75,7 @@ img.fluid {
 }
 
 .nav-link {
-    color: var(--color-primary-3);
+    color: var(--color-primary-4);
     font-weight: 500;
     padding: 10px 30px; /* Ajuste del padding */
     transition: color 0.3s ease, transform 0.3s ease;
@@ -114,6 +116,12 @@ img.fluid {
     display: flex;
     align-items: center;
 }
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: var(--color-primary-2); /* Change this to your preferred active link color */
+}
+
 
 .nav-item {
     margin-left: 20px;
@@ -159,12 +167,10 @@ img.fluid {
 /*Hero y Video*/
 .tagline {
     font-size: 2rem;
-    color: var(--color-primary-2);
     font-weight: bold;
     background-color: var(--color-primary-4);
     padding: 10px;
     border-radius: 8px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
 }
 /* Hero Section */
@@ -197,24 +203,48 @@ img.fluid {
 .hero-area-v2 {
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #fcd34d;
+    background-color: var(--color-primary-4);
     overflow: hidden; /* Asegura que los elementos no se desborden */
 }
 
 /* Ajuste para el texto del héroe */
 .hero-title {
-    font-size: 2.5rem; /* Tamaño de fuente dinámico */
+    font-size: 3.0rem; /* Tamaño de fuente dinámico */
     text-align: center; /* Alinea el texto al centro */
-    margin-bottom: 10px;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     text-align: center; /* Alinea el texto al centro */
     margin: 0 auto;
 }
 
+.carousel {
+    background-color: var(--color-primary-2);
+}
+
+/* Change the carousel control icons to blue */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--color-primary-3); /* Set the icon background color to blue */
+    border-radius: 50%;
+}
+
+.carousel-caption h5 {
+    color: #000000;
+}
+
+.carousel-caption p {
+    margin-bottom: 1.0rem;
+    bottom: 390px;}
+
+.carousel-caption {
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: transparent;
+}
 /* Ajuste para la imagen del héroe */
 .hero-image img {
     max-width: 100%; /* Ajusta la imagen al contenedor */
@@ -279,22 +309,15 @@ img.fluid {
 }
 
 #about .section-background {
-    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-left: auto;
     margin-right: auto;
 }
 
-#about .section-background:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
 #about .section-background h2 {
     margin-top: 0;
+    margin-bottom: 1.1rem;
 }
 
 #about .section-background p {
@@ -327,8 +350,23 @@ img.fluid {
 }
 
 
+.full-width-background {
+    background-color: var(--color-primary-3); /* Cambia el color de fondo según tu diseño */
+    color:#f5f5f5;
+    width: 100%;
+    padding: 2rem 0; /* Ajusta el espaciado superior e inferior según sea necesario */
+    margin-left: calc(-100vw / 2 + 50%); /* Alinea la sección con el ancho completo */
+    margin-right: calc(-100vw / 2 + 50%); /* Alinea la sección con el ancho completo */
+}
 
-
+.about-armadillo {
+    background-color: var(--color-primary-3); /* Cambia el color de fondo según tu diseño */
+    color:#f5f5f5;
+    width: 100%;
+    padding: 2rem 0; /* Ajusta el espaciado superior e inferior según sea necesario */
+    margin-left: calc(-100vw / 2 + 50%); /* Alinea la sección con el ancho completo */
+    margin-right: calc(-100vw / 2 + 50%); /* Alinea la sección con el ancho completo */
+}
 /* Estilos de carrusel */
 
 #armadillo .section-title {
@@ -398,39 +436,43 @@ img.fluid {
 }
 
 
-
+.block-section {
+    background-color: var(--color-primary); /* Fondo del contenedor de tarjetas */
+    color: #f5f5f5;
+    border-radius: 20px; /* Bordes redondeados del contenedor */
+    padding: 2rem; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    
+}
 
 /* Estilos generales para el contenedor de la sección | Tarjetas*/
 
 /* Estilos para la sección del equipo */
 /* Estilos para la sección del equipo */
+/* Estilos para la sección principal del equipo */
 .team-section {
-    background-color: #f9f9f9; /* Color de fondo de la sección */
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: var(--color-primary-2); /* Fondo del contenedor de tarjetas */
+    border-radius: 20px; /* Bordes redondeados del contenedor */
+    padding: 2rem; /* Espaciado interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado horizontal */
+    
 }
 
-.team-container {
-    background-color: var(--color-primary-6); /* Fondo blanco del contenedor de tarjetas */
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
 .team-section h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
-    color: var(--color-primary-3);
+    margin-bottom: 1.0rem;
 }
 
 /* Contenedor de las tarjetas */
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
 }
 
@@ -439,11 +481,12 @@ img.fluid {
     position: relative;
     width: 300px;
     height: 300px;
-    background-color: var(--color-primary-3); /* Fondo blanco detrás de las tarjetas */
+    background-color: var(--color-primary-2); /* Fondo blanco detrás de las tarjetas */
     border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);*/
     overflow: hidden;
     perspective: 1000px; /* Profundidad de perspectiva para el giro */
+    margin-bottom: 0.2rem;
 }
 
 /* Estilos del contenedor de la tarjeta */
@@ -456,7 +499,7 @@ img.fluid {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
+    transition: transform 1s;
     transform-style: preserve-3d;
 }
 
@@ -487,14 +530,14 @@ img.fluid {
 }
 
 .flip-card-back {
-    background-color: var(--color-primary-5); /* Color de fondo de la parte trasera */
+    background-color: var(--color-primary); /* Color de fondo de la parte trasera */
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.208);
 }
 
 .back-content {
@@ -518,31 +561,48 @@ img.fluid {
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
+    text-align: center;
+
 }
 
 .info .name {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
-.info .position {
-    font-size: 1.3rem;
-    margin: 1px 1px;
+.info .position-linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
 }
+
 
 .info .linkedin-icon {
     color: white;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 
+.info .position {
+    font-size: 0.9rem;
+
+}
+
+.team-picture {
+    max-width: 1200px; /* Ancho máximo */
+    border-radius: 20px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del contenedor */
+    margin: 0 auto; /* Centrado horizontal */
+}
+
+.team-picture .img-fluid{
+    border-radius: 20px; /* Bordes redondeados del contenedor */
+}
 
 .bg-blue {
-    background-color: #4494ff;
-    padding: 3rem 0;
+    background-color: var(--color-primary-3);
+    padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -550,6 +610,8 @@ img.fluid {
 }
 .footer-white-color {
     color: #fff;
+    background-color: var(--color-primary-3);
+
 }
 .footer-wrapper {
     display: flex;
@@ -569,6 +631,7 @@ img.fluid {
     text-align: center;
     max-width: 250px;
     margin: auto;
+    margin-right: 2.75rem;
 }
 .footer-social ul {
     display: flex;
@@ -589,7 +652,7 @@ img.fluid {
     transition: color 0.3s ease;
 }
 .footer-social ul li a:hover {
-    color: #e0d110; /* Color primario-2 */
+    color: var(--color-primary-2); /* Color primario-2 */
 }
 .footer-social ul li i {
     margin-right: 10px;
@@ -609,7 +672,7 @@ img.fluid {
     transition: color 0.3s ease;
 }
 .footer-list a:hover {
-    color: #e0d110;
+    color: var(--color-primary-2);
     text-decoration: underline;
 }
 .footer-logo {
@@ -651,10 +714,6 @@ img.fluid {
     animation: fadeIn 2s ease-in-out;
 }
 
-.bg-blue {
-    background-color: #4494ff;
-    padding: 2rem;
-}
 .social-logo {
     width: 24px;
     height: 24px;
@@ -684,7 +743,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 
 .common-heading {
-    margin-bottom: 50px; 
+    margin-top: 50px; 
 }
 
 
