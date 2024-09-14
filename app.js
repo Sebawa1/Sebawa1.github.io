@@ -22,6 +22,7 @@ app.get('/about2', (req, res) => {
 app.get('/contact', (req, res) => {
   res.sendFile(path.join(__dirname, 'contact.html'));
 });
+
 // Levantar servidor
 app.listen(port, () => {
     console.log(`Servidor escuchando en http://localhost:${port}`);

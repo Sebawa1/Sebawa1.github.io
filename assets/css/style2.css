@@ -49,6 +49,8 @@ img.fluid {
     padding: 1rem 3rem; /* Espaciado interno ajustado */
     width: 100%; 
     max-width: none; /* Quita cualquier restricción de ancho máximo */
+    margin-left: 0; /* Alinea la barra a la izquierda */
+
     /*border-radius: 10px; /* Esquinas redondeadas del contenedor */
     overflow: hidden; /* Asegura que el borde no sobresalga del contenedor */
 }
@@ -88,18 +90,22 @@ img.fluid {
     background: none;
     outline: none;
     transition: transform 0.3s ease;
+    transform: rotate(0deg); /* Ensure the icon starts in its normal state */
 }
 
 .navbar-toggler-icon {
-    background-image: url('data:image/svg+xml,...'); /* Icono de menú de hamburguesa, reemplaza con tu SVG */
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 0.8)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E'); /* White icon */
     background-repeat: no-repeat;
     background-size: 1.25em 1.25em;
 }
 
-.navbar-toggler:hover {
-    transform: rotate(90deg); /* Rotación del ícono de menú al pasar el cursor */
+.navbar-toggler.collapsed {
+    transform: rotate(0deg); /* No rotation when collapsed */
 }
 
+.navbar-toggler:not(.collapsed) {
+    transform: rotate(90deg); /* Rotate when expanded */
+}
 
 .nav-link:hover {
     color: var(--color-primary-2); /* Color al pasar el cursor */
@@ -222,6 +228,7 @@ img.fluid {
 
 .carousel {
     background-color: var(--color-primary-2);
+    padding: 20px;
 }
 
 /* Change the carousel control icons to blue */
@@ -232,18 +239,30 @@ img.fluid {
 }
 
 .carousel-caption h5 {
-    color: #000000;
+    font-weight:bolder;
+    font-size: 2.0rem;
 }
 
 .carousel-caption p {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-align-last: center;
     margin-bottom: 1.0rem;
-    bottom: 390px;}
+    margin-top: 1.0rem;
+    bottom: 390px;
+}
 
 .carousel-caption {
+    color: var(--color-primary-3);
     position: relative;
+    text-align: center; /* Center the content inside the caption */
     left: 0;
     top: 0;
     background-color: transparent;
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Align children in a column */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 /* Ajuste para la imagen del héroe */
 .hero-image img {
@@ -369,29 +388,22 @@ img.fluid {
 }
 /* Estilos de carrusel */
 
+
 #armadillo .section-title {
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
 #armadillo .section-background {
-    background: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-left: auto;
     margin-right: auto;
 }
 
-#armadillo .section-background:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
 #armadillo .section-background h2 {
     margin-top: 0;
-}
+    margin-bottom: 1.1rem;}
 
 #armadillo .section-background p {
     font-size: 1.1rem;
